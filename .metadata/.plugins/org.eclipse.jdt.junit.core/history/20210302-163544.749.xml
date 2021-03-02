@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="SalesProcessingRestControllerTest" project="salesProcessing-service" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="com.caseStudy.salesProcessingservice.Controller.SalesProcessingRestControllerTest" time="0.184" displayname="SalesProcessingRestControllerTest" uniqueid="[engine:junit-jupiter]/[class:com.caseStudy.salesProcessingservice.Controller.SalesProcessingRestControllerTest]">
+    <testcase name="testSaveQuotationController" classname="com.caseStudy.salesProcessingservice.Controller.SalesProcessingRestControllerTest" time="0.158" displayname="testSaveQuotationController()" uniqueid="[engine:junit-jupiter]/[class:com.caseStudy.salesProcessingservice.Controller.SalesProcessingRestControllerTest]/[method:testSaveQuotationController()]"/>
+    <testcase name="testGetQuotation" classname="com.caseStudy.salesProcessingservice.Controller.SalesProcessingRestControllerTest" time="0.012" displayname="testGetQuotation()" uniqueid="[engine:junit-jupiter]/[class:com.caseStudy.salesProcessingservice.Controller.SalesProcessingRestControllerTest]/[method:testGetQuotation()]"/>
+    <testcase name="testGetAllQuotationController" classname="com.caseStudy.salesProcessingservice.Controller.SalesProcessingRestControllerTest" time="0.014" displayname="testGetAllQuotationController()" uniqueid="[engine:junit-jupiter]/[class:com.caseStudy.salesProcessingservice.Controller.SalesProcessingRestControllerTest]/[method:testGetAllQuotationController()]"/>
+  </testsuite>
+</testrun>

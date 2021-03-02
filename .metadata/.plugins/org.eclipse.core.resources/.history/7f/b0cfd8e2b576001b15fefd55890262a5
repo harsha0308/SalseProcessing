@@ -1,0 +1,13 @@
+package com.caseStudy.salesProcessingservice.Service;
+
+import java.util.List;
+
+
+import com.caseStudy.salesProcessingservice.Model.quotationInfo;
+
+public interface salesProcessingService {
+
+	public quotationInfo saveQuotation(quotationInfo quotationInfo1);
+	public List<quotationInfo> getAllQuotation(quotationInfo quotationInfo1);
+	public quotationInfo getQuotation(long id);
+}

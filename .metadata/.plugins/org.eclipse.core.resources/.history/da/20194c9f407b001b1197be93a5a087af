@@ -1,0 +1,14 @@
+package com.caseStudy.salesProcessingservice.Controller;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class SalesProcessingRestControllerTest {
+
+	@Test
+	void test() {
+		fail("Not yet implemented");
+	}
+
+}

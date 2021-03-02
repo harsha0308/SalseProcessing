@@ -1,0 +1,53 @@
+package com.caseStudy.salesProcessingservice.Service;
+
+import java.util.List;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.caseStudy.salesProcessingservice.ExceptionHandling.QuotationRetrieveFailException;
+import com.caseStudy.salesProcessingservice.ExceptionHandling.QuotationSaveFailedException;
+import com.caseStudy.salesProcessingservice.Model.quotationInfo;
+import com.caseStudy.salesProcessingservice.Repository.QuotationInfoRepository;
+@Service
+public class salesProcessingServiceImpl implements salesProcessingService {
+	
+	@Autowired 
+	private QuotationInfoRepository quotationInfoRepository;
+
+	@Override
+	public quotationInfo saveQuotation(quotationInfo quotationInfo1) {
+		//quotationInfo q1= quotationInfo1;
+		 quotationInfo qInfo = quotationInfoRepository.save(quotationInfo1);
+		//System.out.println(quotationInfo1);
+		 if(qInfo == null)
+			 throw new QuotationSaveFailedException("Quote was not saved");
+		 else
+			 return qInfo;
+	}
+
+	@Override
+	public List<quotationInfo> getAllQuotation() {
+		// TODO Auto-generated method stub
+		 return quotationInfoRepository.findAll();
+		 
+		
+	}
+
+	@Override
+	public quotationInfo getQuotation(long id) {
+		// TODO Auto-generated method stub
+		
+		//return quotationInfoRepository.findById(id).get();
+		quotationInfo qInfo1 = quotationInfoRepository.findById(id).get();
+		if()
+			throw new QuotationRetrieveFailException("quote with id not present")
+			else
+				return qInfo1;
+	}
+
+	
+	}
+
+

@@ -1,0 +1,98 @@
+package com.caseStudy.salesProcessingservice;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.springframework.boot.test.context.SpringBootTest;
+import com.caseStudy.salesProcessingservice.Model.QuotationInfo;
+import com.caseStudy.salesProcessingservice.Repository.QuotationInfoRepository;
+import com.caseStudy.salesProcessingservice.Service.SalesProcessingServiceImpl;
+
+import static org.mockito.Mockito.when;
+
+@SpringBootTest
+class SalesProcessingServiceApplicationTests {
+
+	@Mock 
+	private QuotationInfoRepository quotationInfoRepository;
+	@InjectMocks
+	private SalesProcessingServiceImpl salesProcessingServiceImpl;
+	@Test
+	void contextLoads() {
+	}
+	//Testing the Model QuotationInfo
+	@Test
+	void testQuotationInfoModel() throws Exception {
+		QuotationInfo quotationInfo = new QuotationInfo();
+		quotationInfo.setName("Harsha");
+		quotationInfo.setAddress("Jamshedpur");
+		quotationInfo.setContactNumber("9087654321");
+		quotationInfo.setEmailId("harsha@gmail.com");
+		quotationInfo.setInsuranceType("LIC");
+		quotationInfo.setCost(9000);
+		assertEquals("Harsha",quotationInfo.getName());
+		assertEquals("Jamshedpur",quotationInfo.getAddress());
+		assertEquals("9087654321",quotationInfo.getContactNumber());
+		assertEquals("harsha@gmail.com",quotationInfo.getEmailId());
+		assertEquals("LIC",quotationInfo.getInsuranceType());
+		assertEquals(9000,quotationInfo.getCost());	
+	}
+	//Testing saveQuotation() of  SalesProcessingServiceImpl
+	@Test
+	void saveQuotation() throws Exception{
+		QuotationInfo quotationInfo = new QuotationInfo();
+		quotationInfo.setName("Harsha");
+		quotationInfo.setAddress("Jamshedpur");
+		quotationInfo.setContactNumber("9087654321");
+		quotationInfo.setEmailId("harsha@gmail.com");
+		quotationInfo.setInsuranceType("LIC");
+		quotationInfo.setCost(9000);
+		when(quotationInfoRepository.save(quotationInfo)).thenReturn(quotationInfo);
+		QuotationInfo quotationInfo2 = salesProcessingServiceImpl.saveQuotation(quotationInfo);
+		assertThat(quotationInfo2).isNotNull();
+		assertEquals("Harsha",quotationInfo2.getName());
+		assertEquals("Jamshedpur",quotationInfo2.getAddress());
+		assertEquals("9087654321",quotationInfo2.getContactNumber());
+		assertEquals("harsha@gmail.com",quotationInfo2.getEmailId());
+		assertEquals("LIC",quotationInfo2.getInsuranceType());
+		assertEquals(9000,quotationInfo2.getCost());
+		
+	}
+	//Testing getQuotation() method of SalesProcessingServiceImpl
+	/*@Test
+	void testAddCustomer() throws Exception {
+		final Customer customer1 = new Customer();
+		customer1.setCustId(11L);
+		customer1.setName("dekshith");
+		customer1.setUserName("dekshith123");
+		customer1.setPassword("dee1234");
+		customer1.setAddress("196/567");
+		customer1.setState("telangana");
+		customer1.setCountry("india");
+		customer1.setEmailAddress("dgundeti@gmail.com");
+		customer1.setPan("ABCDE12345");
+		customer1.setContactNo("1234567890");
+		customer1.setDob("12-8-1997");
+		customer1.setAccountType("savings");
+		customer1.setAccountNum(6628261344866053L);
+		when(customerRepository.save(customer1)).thenReturn(customer1);
+
+		final Customer customer = customerService.addCustomer(customer1);
+		assertThat(customer).isNotNull();
+		assertEquals(11L, customer.getCustId());
+		assertEquals("dekshith", customer.getName());
+		assertEquals("dekshith123", customer.getUserName());
+		assertEquals("dee1234", customer.getPassword());
+		assertEquals("196/567", customer.getAddress());
+		assertEquals("telangana", customer.getState());
+		assertEquals("india", customer.getCountry());
+		assertEquals("dgundeti@gmail.com", customer.getEmailAddress());
+		assertEquals("ABCDE12345", customer.getPan());
+		assertEquals("1234567890", customer.getContactNo());
+		assertEquals("12-8-1997", customer.getDob());
+		assertEquals("savings", customer.getAccountType());
+		assertEquals(6628261344866053L, customer.getAccountNum());
+	}*/
+}

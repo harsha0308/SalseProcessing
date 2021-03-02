@@ -1,0 +1,5 @@
+package com.caseStudy.salesProcessingservice.Controller;
+
+public class SalesProcessingController {
+
+}

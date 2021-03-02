@@ -1,0 +1,32 @@
+package com.caseStudy.salesProcessingservice;
+
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+import com.caseStudy.salesProcessingservice.Model.QuotationInfo;
+
+@SpringBootTest
+class SalesProcessingServiceApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+	
+	@Test
+	void testQuotationInfoModel() throws Exception {
+		QuotationInfo quotationInfo = new QuotationInfo();
+		quotationInfo.setName("Harsha");
+		quotationInfo.setAddress("Jamshedpur");
+		quotationInfo.setContactNumber("9087654321");
+		quotationInfo.setEmailId("harsha@gmail.com");
+		quotationInfo.setInsuranceType("LIC");
+		quotationInfo.setCost(9000);
+		assertEquals("Harsha",quotationInfo.getName());
+		assertEquals("Jamshedpur",quotationInfo.getAddress());
+		assertEquals("9087654321",quotationInfo.getContactNumber());
+		assertEquals("harsha@gmail.com",quotationInfo.getEmailId());
+		assertEquals("LIC",quotationInfo.getInsuranceType());
+		assertEquals(9000,quotationInfo.getCost());	
+	}
+
+}

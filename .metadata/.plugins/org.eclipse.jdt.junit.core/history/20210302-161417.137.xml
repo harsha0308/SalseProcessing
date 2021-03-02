@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="SalesProcessingRestControllerTest" project="salesProcessing-service" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.caseStudy.salesProcessingservice.Controller.SalesProcessingRestControllerTest" time="0.179" displayname="SalesProcessingRestControllerTest" uniqueid="[engine:junit-jupiter]/[class:com.caseStudy.salesProcessingservice.Controller.SalesProcessingRestControllerTest]">
+    <testcase name="testSaveQuotationController" classname="com.caseStudy.salesProcessingservice.Controller.SalesProcessingRestControllerTest" time="0.179" displayname="testSaveQuotationController()" uniqueid="[engine:junit-jupiter]/[class:com.caseStudy.salesProcessingservice.Controller.SalesProcessingRestControllerTest]/[method:testSaveQuotationController()]"/>
+  </testsuite>
+</testrun>

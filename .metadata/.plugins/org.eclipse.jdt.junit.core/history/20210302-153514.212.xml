@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="SwaggerConfigTest" project="salesProcessing-service" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="com.caseStudy.salesProcessingservice.Configuration.SwaggerConfigTest" time="0.039" displayname="SwaggerConfigTest" uniqueid="[engine:junit-jupiter]/[class:com.caseStudy.salesProcessingservice.Configuration.SwaggerConfigTest]">
+    <testcase name="config" classname="com.caseStudy.salesProcessingservice.Configuration.SwaggerConfigTest" time="0.039" displayname="config()" uniqueid="[engine:junit-jupiter]/[class:com.caseStudy.salesProcessingservice.Configuration.SwaggerConfigTest]/[method:config()]"/>
+  </testsuite>
+</testrun>

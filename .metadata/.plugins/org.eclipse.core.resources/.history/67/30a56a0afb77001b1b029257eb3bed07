@@ -1,0 +1,53 @@
+package com.caseStudy.salesProcessingservice.Service;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.caseStudy.salesProcessingservice.ExceptionHandling.QuotationRetrieveFailException;
+import com.caseStudy.salesProcessingservice.ExceptionHandling.QuotationSaveFailedException;
+import com.caseStudy.salesProcessingservice.Model.QuotationInfo;
+import com.caseStudy.salesProcessingservice.Repository.QuotationInfoRepository;
+@Service
+public class SalesProcessingServiceImpl implements SalesProcessingService {
+	
+	@Autowired 
+	private QuotationInfoRepository quotationInfoRepository;
+
+	@Override
+	public QuotationInfo saveQuotation(QuotationInfo quotationInfo1) {
+		//quotationInfo q1= quotationInfo1;
+		 QuotationInfo qInfo = quotationInfoRepository.save(quotationInfo1);
+		//System.out.println(quotationInfo1);
+		 if(qInfo == null)
+			 throw new QuotationSaveFailedException("Quote was not saved");
+		 else
+			 return qInfo;
+	}
+
+	@Override
+	public List<QuotationInfo> getAllQuotation() {
+		// TODO Auto-generated method stub
+		 return quotationInfoRepository.findAll();
+		 
+		
+	}
+
+	@Override
+	public Optional<QuotationInfo> getQuotation(long id) {
+		// TODO Auto-generated method stub
+		
+		//return quotationInfoRepository.findById(id).get();
+		Optional<QuotationInfo> qInfo1 = quotationInfoRepository.findById(id);
+		if(!qInfo1.isPresent())
+			throw new QuotationRetrieveFailException("quote id not present");
+			else
+				return qInfo1;
+	}
+
+	
+	}
+
+

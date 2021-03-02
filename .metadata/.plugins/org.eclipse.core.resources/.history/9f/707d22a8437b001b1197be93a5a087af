@@ -1,0 +1,55 @@
+package com.caseStudy.salesProcessingservice.Controller;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.when;
+
+import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.ResponseEntity;
+
+import com.caseStudy.salesProcessingservice.Model.QuotationInfo;
+import com.caseStudy.salesProcessingservice.Repository.QuotationInfoRepository;
+import com.caseStudy.salesProcessingservice.Service.SalesProcessingServiceImpl;
+@SpringBootTest
+class SalesProcessingRestControllerTest {
+	
+	@Mock
+	private QuotationInfoRepository quotationInfoRepository;
+	@InjectMocks
+	private SalesProcessingServiceImpl salesProcessingServiceImpl;
+	@InjectMocks
+	private SalesProcessingRestController salesProcessingRestController;
+	
+	
+	
+	@Test
+	void testSaveQuotationController() throws Exception{
+		QuotationInfo quotationInfo = new QuotationInfo();
+		quotationInfo.setName("Harsha");
+		quotationInfo.setAddress("Jamshedpur");
+		quotationInfo.setContactNumber("9087654321");
+		quotationInfo.setEmailId("harsha@gmail.com");
+		quotationInfo.setInsuranceType("LIC");
+		quotationInfo.setCost(9000);
+		when(quotationInfoRepository.save(quotationInfo)).thenReturn(quotationInfo);
+		//QuotationInfo quotationInfo = new QuotationInfo(5L,"Harsha","Jamshedpur","9807654321","harsha@gmail.com","LIFE Insurance",7800);
+		//when(quotationInfoRepository.save(quotationInfo)).thenReturn(quotationInfo);
+		QuotationInfo qInfo = salesProcessingServiceImpl.saveQuotation(quotationInfo);
+		assertThat(qInfo).isNotNull();
+	}
+	/* @Test
+		void testBreaker1() throws Exception {
+		  final	Customer customer1 = new Customer(11L,"dekshith","dekshith123","dee1234","196/567",
+					"telangana","india","dgundeti@gmail.com","ABCDE12345","1234567890","12-8-1997","savings",
+					6628261344866053L);
+			when(customerRepository.save(customer1)).thenReturn(customer1);
+
+			final ResponseEntity<CustomResponse> customer = customerController.circuitBreaker1(customer1);
+			assertThat(customer).isNotNull();
+		
+		}*/
+
+}

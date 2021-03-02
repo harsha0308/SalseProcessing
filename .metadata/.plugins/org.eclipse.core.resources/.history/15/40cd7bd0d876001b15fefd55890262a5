@@ -1,0 +1,12 @@
+package com.caseStudy.salesProcessingservice.Model;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@Data
+@AllArgsConstructor
+public class CustomResponse {
+	private int httpStatus;
+	private String message;
+	private Object object;
+}

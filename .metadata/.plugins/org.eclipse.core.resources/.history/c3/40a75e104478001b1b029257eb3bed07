@@ -1,0 +1,45 @@
+package com.caseStudy.salesProcessingservice;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+import static org.junit.Assert.*;
+import com.caseStudy.salesProcessingservice.Model.QuotationInfo;
+
+@SpringBootTest
+class SalesProcessingServiceApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+	
+	@Test
+	void testQuotationInfoModel() throws Exception {
+		QuotationInfo quotationInfo = new QuotationInfo();
+		quotationInfo.setName("Harsha");
+		quotationInfo.setAddress("Jamshedpur");
+		quotationInfo.setContactNumber("9087654321");
+		quotationInfo.setEmailId("harsha@gmail.com");
+		quotationInfo.setInsuranceType("LIC");
+		quotationInfo.setCost(9000);
+		assertEquals("Harsha",quotationInfo.getName());
+		
+		/*Customer cust=new Customer(9L);
+		final  Loan loan1 = new Loan();
+		loan1.setCustomer(cust);
+		loan1.setLoanId(1L);
+		loan1.setDate("12-8-1998");
+		loan1.setLoanAmount(1000000L);
+		loan1.setLoanType("personal");
+		loan1.setRateOfInterest("3");
+		loan1.setDurationOfLoan("36");
+		assertEquals(1000000L,loan1.getLoanAmount());
+		assertEquals(1L,loan1.getLoanId());
+		assertEquals("12-8-1998",loan1.getDate());
+		assertEquals(cust,loan1.getCustomer());	
+		assertEquals("personal",loan1.getLoanType());
+		assertEquals("3",loan1.getRateOfInterest());
+		assertEquals("36",loan1.getDurationOfLoan());*/
+		
+	}
+
+}
