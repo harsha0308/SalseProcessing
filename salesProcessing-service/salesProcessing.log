@@ -1,860 +1,218 @@
-2021-03-02 12:42:24.612  INFO 660 --- [restartedMain] c.c.s.SalesProcessingServiceApplication  : Starting SalesProcessingServiceApplication using Java 15.0.1 on Dell with PID 660 (C:\Users\Harsha\Documents\caseStudy\salesProcessing-service\target\classes started by Harsha in C:\Users\Harsha\Documents\caseStudy\salesProcessing-service)
-2021-03-02 12:42:24.621  INFO 660 --- [restartedMain] c.c.s.SalesProcessingServiceApplication  : No active profile set, falling back to default profiles: default
-2021-03-02 12:42:24.923  INFO 660 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-03-02 12:42:24.924  INFO 660 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-03-02 12:42:27.797  INFO 660 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-03-02 12:42:27.918  INFO 660 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102 ms. Found 1 JPA repository interfaces.
-2021-03-02 12:42:29.089  INFO 660 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2021-03-02 12:42:29.121  INFO 660 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-03-02 12:42:29.122  INFO 660 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
-2021-03-02 12:42:29.585  INFO 660 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2021-03-02 12:42:29.594  INFO 660 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-03-02 12:42:29.595  INFO 660 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4669 ms
-2021-03-02 12:42:29.741  INFO 660 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-03-02 12:42:30.054  INFO 660 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-03-02 12:42:30.064  INFO 660 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2021-03-02 12:42:30.452  INFO 660 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-03-02 12:42:30.609  INFO 660 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
-2021-03-02 12:42:30.882  INFO 660 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-03-02 12:42:31.156  INFO 660 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2021-03-02 12:42:32.448  INFO 660 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-03-02 12:42:32.477  INFO 660 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 12:42:32.540  INFO 660 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-03-02 12:42:33.318  WARN 660 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-03-02 12:42:33.574  INFO 660 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-03-02 12:42:33.754  INFO 660 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-03-02 12:42:34.113  INFO 660 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2021-03-02 12:42:34.114  INFO 660 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-03-02 12:42:34.161  INFO 660 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-03-02 12:42:34.194  INFO 660 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-03-02 12:42:34.337  WARN 660 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 12:42:34.388  WARN 660 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 12:42:34.394  WARN 660 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 12:42:34.399  WARN 660 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 12:42:34.502  INFO 660 --- [restartedMain] c.c.s.SalesProcessingServiceApplication  : Started SalesProcessingServiceApplication in 10.946 seconds (JVM running for 14.486)
-2021-03-02 12:42:42.428  INFO 660 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-03-02 12:42:42.428  INFO 660 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-03-02 12:42:42.430  INFO 660 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-03-02 12:42:42.471  INFO 660 --- [http-nio-8081-exec-1] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
-2021-03-02 12:42:42.472  INFO 660 --- [http-nio-8081-exec-1] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
-2021-03-02 12:42:46.343  INFO 660 --- [http-nio-8081-exec-3] c.c.s.C.SalesProcessingController        : INSIDE showSaveQuotePage method of SalesProcessingController
-2021-03-02 12:42:46.343  INFO 660 --- [http-nio-8081-exec-3] c.c.s.C.SalesProcessingController        : ENDING showSaveQuotePage method of SalesProcessingController
-2021-03-02 12:47:11.788  INFO 660 --- [http-nio-8081-exec-6] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
-2021-03-02 12:47:11.789  INFO 660 --- [http-nio-8081-exec-6] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
-2021-03-02 12:47:13.821  INFO 660 --- [http-nio-8081-exec-7] c.c.s.C.SalesProcessingController        : INSIDE showSaveQuotePage method of SalesProcessingController
-2021-03-02 12:47:13.822  INFO 660 --- [http-nio-8081-exec-7] c.c.s.C.SalesProcessingController        : ENDING showSaveQuotePage method of SalesProcessingController
-2021-03-02 12:47:36.126  INFO 660 --- [http-nio-8081-exec-10] c.c.s.C.SalesProcessingController        : INSIDE showSaveQuotePage method of SalesProcessingController
-2021-03-02 12:47:36.127  INFO 660 --- [http-nio-8081-exec-10] c.c.s.C.SalesProcessingController        : ENDING showSaveQuotePage method of SalesProcessingController
-2021-03-02 12:47:36.340  INFO 660 --- [http-nio-8081-exec-8] c.c.s.C.SalesProcessingRestController    : Inside saveQuotation method of SalesProcessingRestController
-2021-03-02 12:47:36.340  INFO 660 --- [http-nio-8081-exec-8] c.c.s.S.SalesProcessingServiceImpl       : Inside saveQuotation method of SalesProcessingServiceImpl
-2021-03-02 12:47:41.581  INFO 660 --- [http-nio-8081-exec-9] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
-2021-03-02 12:47:41.582  INFO 660 --- [http-nio-8081-exec-9] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
-2021-03-02 12:47:43.662  INFO 660 --- [http-nio-8081-exec-1] c.c.s.C.SalesProcessingController        : INSIDE showGetQuotesPage method of SalesProcessingController
-2021-03-02 12:47:43.663  INFO 660 --- [http-nio-8081-exec-1] c.c.s.C.SalesProcessingController        : ENDING showGetQuotesPage method of SalesProcessingController
-2021-03-02 12:47:44.731  INFO 660 --- [http-nio-8081-exec-2] c.c.s.C.SalesProcessingRestController    : Inside getAllQuotation method of SalesProcessingRestController
-2021-03-02 12:47:44.731  INFO 660 --- [http-nio-8081-exec-2] c.c.s.S.SalesProcessingServiceImpl       : Inside getAllQuotation method of SalesProcessingServiceImpl
-2021-03-02 12:48:00.690  INFO 660 --- [http-nio-8081-exec-3] c.c.s.C.SalesProcessingRestController    : Inside getAllQuotation method of SalesProcessingRestController
-2021-03-02 12:48:00.691  INFO 660 --- [http-nio-8081-exec-3] c.c.s.S.SalesProcessingServiceImpl       : Inside getAllQuotation method of SalesProcessingServiceImpl
-2021-03-02 12:48:02.989  INFO 660 --- [http-nio-8081-exec-5] c.c.s.C.SalesProcessingController        : INSIDE showGetQuotesPage method of SalesProcessingController
-2021-03-02 12:48:02.989  INFO 660 --- [http-nio-8081-exec-5] c.c.s.C.SalesProcessingController        : ENDING showGetQuotesPage method of SalesProcessingController
-2021-03-02 12:48:04.425  INFO 660 --- [http-nio-8081-exec-4] c.c.s.C.SalesProcessingRestController    : Inside getAllQuotation method of SalesProcessingRestController
-2021-03-02 12:48:04.426  INFO 660 --- [http-nio-8081-exec-4] c.c.s.S.SalesProcessingServiceImpl       : Inside getAllQuotation method of SalesProcessingServiceImpl
-2021-03-02 12:48:07.678  INFO 660 --- [http-nio-8081-exec-6] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
-2021-03-02 12:48:07.678  INFO 660 --- [http-nio-8081-exec-6] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
-2021-03-02 12:48:09.372  INFO 660 --- [http-nio-8081-exec-7] c.c.s.C.SalesProcessingController        : INSIDE showSaveQuotePage method of SalesProcessingController
-2021-03-02 12:48:09.374  INFO 660 --- [http-nio-8081-exec-7] c.c.s.C.SalesProcessingController        : ENDING showSaveQuotePage method of SalesProcessingController
-2021-03-02 12:48:30.286  INFO 660 --- [http-nio-8081-exec-10] c.c.s.C.SalesProcessingRestController    : Inside saveQuotation method of SalesProcessingRestController
-2021-03-02 12:48:30.287  INFO 660 --- [http-nio-8081-exec-10] c.c.s.S.SalesProcessingServiceImpl       : Inside saveQuotation method of SalesProcessingServiceImpl
-2021-03-02 12:48:30.299  INFO 660 --- [http-nio-8081-exec-8] c.c.s.C.SalesProcessingController        : INSIDE showSaveQuotePage method of SalesProcessingController
-2021-03-02 12:48:30.299  INFO 660 --- [http-nio-8081-exec-8] c.c.s.C.SalesProcessingController        : ENDING showSaveQuotePage method of SalesProcessingController
-2021-03-02 12:48:36.337  INFO 660 --- [http-nio-8081-exec-9] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
-2021-03-02 12:48:36.338  INFO 660 --- [http-nio-8081-exec-9] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
-2021-03-02 12:48:38.766  INFO 660 --- [http-nio-8081-exec-1] c.c.s.C.SalesProcessingController        : INSIDE showGetQuoteByIdPage method of SalesProcessingController
-2021-03-02 12:48:38.767  INFO 660 --- [http-nio-8081-exec-1] c.c.s.C.SalesProcessingController        : ENDING showGetQuoteByIdPage method of SalesProcessingController
-2021-03-02 12:48:42.408  INFO 660 --- [http-nio-8081-exec-2] c.c.s.C.SalesProcessingRestController    : Inside getQuotation method of SalesProcessingRestController
-2021-03-02 12:48:42.408  INFO 660 --- [http-nio-8081-exec-2] c.c.s.S.SalesProcessingServiceImpl       : Inside getQuotation method of SalesProcessingServiceImpl
-2021-03-02 12:48:46.349  INFO 660 --- [http-nio-8081-exec-3] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
-2021-03-02 12:48:46.350  INFO 660 --- [http-nio-8081-exec-3] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
-2021-03-02 12:48:48.220  INFO 660 --- [http-nio-8081-exec-5] c.c.s.C.SalesProcessingController        : INSIDE showGetQuotesPage method of SalesProcessingController
-2021-03-02 12:48:48.222  INFO 660 --- [http-nio-8081-exec-5] c.c.s.C.SalesProcessingController        : ENDING showGetQuotesPage method of SalesProcessingController
-2021-03-02 12:48:50.412  INFO 660 --- [http-nio-8081-exec-4] c.c.s.C.SalesProcessingRestController    : Inside getAllQuotation method of SalesProcessingRestController
-2021-03-02 12:48:50.412  INFO 660 --- [http-nio-8081-exec-4] c.c.s.S.SalesProcessingServiceImpl       : Inside getAllQuotation method of SalesProcessingServiceImpl
-2021-03-02 13:02:54.189  INFO 660 --- [Thread-5] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-03-02 13:02:54.192  INFO 660 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 13:02:54.193  INFO 660 --- [Thread-5] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2021-03-02 13:02:54.423  WARN 660 --- [Thread-5] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
-2021-03-02 13:02:54.424  INFO 660 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-03-02 13:02:54.427  INFO 660 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-03-02 13:02:54.570  INFO 660 --- [restartedMain] c.c.s.SalesProcessingServiceApplication  : Starting SalesProcessingServiceApplication using Java 15.0.1 on Dell with PID 660 (C:\Users\Harsha\Documents\caseStudy\salesProcessing-service\target\classes started by Harsha in C:\Users\Harsha\Documents\caseStudy\salesProcessing-service)
-2021-03-02 13:02:54.571  INFO 660 --- [restartedMain] c.c.s.SalesProcessingServiceApplication  : No active profile set, falling back to default profiles: default
-2021-03-02 13:02:55.073  INFO 660 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-03-02 13:02:55.088  INFO 660 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 1 JPA repository interfaces.
-2021-03-02 13:02:55.203  INFO 660 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2021-03-02 13:02:55.204  INFO 660 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-03-02 13:02:55.205  INFO 660 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
-2021-03-02 13:02:55.323  INFO 660 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2021-03-02 13:02:55.324  INFO 660 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-03-02 13:02:55.325  INFO 660 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 750 ms
-2021-03-02 13:02:55.363  INFO 660 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2021-03-02 13:02:55.366  INFO 660 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2021-03-02 13:02:55.366  INFO 660 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2021-03-02 13:02:55.402  INFO 660 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-03-02 13:02:55.412  INFO 660 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2021-03-02 13:02:55.486  INFO 660 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-03-02 13:02:55.487  INFO 660 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 13:02:55.515  INFO 660 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-03-02 13:02:55.670  WARN 660 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-03-02 13:02:55.720  INFO 660 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-03-02 13:02:55.760  INFO 660 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-03-02 13:02:55.850  INFO 660 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2021-03-02 13:02:55.852  INFO 660 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-03-02 13:02:55.853  INFO 660 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-03-02 13:02:55.864  INFO 660 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-03-02 13:02:55.907  WARN 660 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 13:02:55.914  WARN 660 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 13:02:55.921  WARN 660 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 13:02:55.927  WARN 660 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 13:02:55.932  WARN 660 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 13:02:55.984  INFO 660 --- [restartedMain] c.c.s.SalesProcessingServiceApplication  : Started SalesProcessingServiceApplication in 1.476 seconds (JVM running for 1235.968)
-2021-03-02 13:02:55.987  INFO 660 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2021-03-02 13:03:04.661  INFO 660 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-03-02 13:03:04.662  INFO 660 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-03-02 13:03:04.665  INFO 660 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2021-03-02 13:03:04.667  INFO 660 --- [http-nio-8081-exec-2] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
-2021-03-02 13:03:04.668  INFO 660 --- [http-nio-8081-exec-2] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
-2021-03-02 13:03:07.381  INFO 660 --- [http-nio-8081-exec-3] c.c.s.C.SalesProcessingController        : INSIDE showSaveQuotePage method of SalesProcessingController
-2021-03-02 13:03:07.382  INFO 660 --- [http-nio-8081-exec-3] c.c.s.C.SalesProcessingController        : ENDING showSaveQuotePage method of SalesProcessingController
-2021-03-02 13:03:22.707  INFO 660 --- [http-nio-8081-exec-1] c.c.s.C.SalesProcessingRestController    : Inside saveQuotation method of SalesProcessingRestController
-2021-03-02 13:03:22.708  INFO 660 --- [http-nio-8081-exec-1] c.c.s.S.SalesProcessingServiceImpl       : Inside saveQuotation method of SalesProcessingServiceImpl
-2021-03-02 13:03:22.718  INFO 660 --- [http-nio-8081-exec-4] c.c.s.C.SalesProcessingController        : INSIDE showSaveQuotePage method of SalesProcessingController
-2021-03-02 13:03:22.719  INFO 660 --- [http-nio-8081-exec-4] c.c.s.C.SalesProcessingController        : ENDING showSaveQuotePage method of SalesProcessingController
-2021-03-02 13:03:51.873  INFO 660 --- [http-nio-8081-exec-5] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
-2021-03-02 13:03:51.875  INFO 660 --- [http-nio-8081-exec-5] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
-2021-03-02 13:03:53.742  INFO 660 --- [http-nio-8081-exec-6] c.c.s.C.SalesProcessingController        : INSIDE showGetQuoteByIdPage method of SalesProcessingController
-2021-03-02 13:03:53.743  INFO 660 --- [http-nio-8081-exec-6] c.c.s.C.SalesProcessingController        : ENDING showGetQuoteByIdPage method of SalesProcessingController
-2021-03-02 13:03:55.938  INFO 660 --- [http-nio-8081-exec-8] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage2 method of SalesProcessingController
-2021-03-02 13:03:55.939  INFO 660 --- [http-nio-8081-exec-8] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage2 method of SalesProcessingController
-2021-03-02 13:05:17.856  INFO 660 --- [http-nio-8081-exec-7] c.c.s.C.SalesProcessingController        : INSIDE showSaveQuotePage method of SalesProcessingController
-2021-03-02 13:05:17.857  INFO 660 --- [http-nio-8081-exec-7] c.c.s.C.SalesProcessingController        : ENDING showSaveQuotePage method of SalesProcessingController
-2021-03-02 13:05:32.785  INFO 660 --- [http-nio-8081-exec-2] c.c.s.C.SalesProcessingRestController    : Inside saveQuotation method of SalesProcessingRestController
-2021-03-02 13:05:32.786  INFO 660 --- [http-nio-8081-exec-2] c.c.s.S.SalesProcessingServiceImpl       : Inside saveQuotation method of SalesProcessingServiceImpl
-2021-03-02 13:05:32.798  INFO 660 --- [http-nio-8081-exec-3] c.c.s.C.SalesProcessingController        : INSIDE showSaveQuotePage method of SalesProcessingController
-2021-03-02 13:05:32.799  INFO 660 --- [http-nio-8081-exec-3] c.c.s.C.SalesProcessingController        : ENDING showSaveQuotePage method of SalesProcessingController
-2021-03-02 13:05:38.447  INFO 660 --- [http-nio-8081-exec-4] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
-2021-03-02 13:05:38.448  INFO 660 --- [http-nio-8081-exec-4] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
-2021-03-02 13:05:41.131  INFO 660 --- [http-nio-8081-exec-1] c.c.s.C.SalesProcessingController        : INSIDE showGetQuoteByIdPage method of SalesProcessingController
-2021-03-02 13:05:41.132  INFO 660 --- [http-nio-8081-exec-1] c.c.s.C.SalesProcessingController        : ENDING showGetQuoteByIdPage method of SalesProcessingController
-2021-03-02 13:05:44.593  INFO 660 --- [http-nio-8081-exec-5] c.c.s.C.SalesProcessingRestController    : Inside getQuotation method of SalesProcessingRestController
-2021-03-02 13:05:44.593  INFO 660 --- [http-nio-8081-exec-5] c.c.s.S.SalesProcessingServiceImpl       : Inside getQuotation method of SalesProcessingServiceImpl
-2021-03-02 13:05:44.600  WARN 660 --- [http-nio-8081-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.caseStudy.salesProcessingservice.ExceptionHandling.QuotationRetrieveFailException: quote id not present]
-2021-03-02 13:05:49.259  INFO 660 --- [http-nio-8081-exec-6] c.c.s.C.SalesProcessingRestController    : Inside getQuotation method of SalesProcessingRestController
-2021-03-02 13:05:49.259  INFO 660 --- [http-nio-8081-exec-6] c.c.s.S.SalesProcessingServiceImpl       : Inside getQuotation method of SalesProcessingServiceImpl
-2021-03-02 13:05:51.609  INFO 660 --- [http-nio-8081-exec-8] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage2 method of SalesProcessingController
-2021-03-02 13:05:51.611  INFO 660 --- [http-nio-8081-exec-8] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage2 method of SalesProcessingController
-2021-03-02 13:07:17.374  INFO 660 --- [http-nio-8081-exec-7] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
-2021-03-02 13:07:17.375  INFO 660 --- [http-nio-8081-exec-7] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
-2021-03-02 13:07:19.028  INFO 660 --- [http-nio-8081-exec-2] c.c.s.C.SalesProcessingController        : INSIDE showSaveQuotePage method of SalesProcessingController
-2021-03-02 13:07:19.029  INFO 660 --- [http-nio-8081-exec-2] c.c.s.C.SalesProcessingController        : ENDING showSaveQuotePage method of SalesProcessingController
-2021-03-02 13:07:45.437  INFO 660 --- [http-nio-8081-exec-3] c.c.s.C.SalesProcessingRestController    : Inside saveQuotation method of SalesProcessingRestController
-2021-03-02 13:07:45.438  INFO 660 --- [http-nio-8081-exec-3] c.c.s.S.SalesProcessingServiceImpl       : Inside saveQuotation method of SalesProcessingServiceImpl
-2021-03-02 13:07:45.439  INFO 660 --- [http-nio-8081-exec-4] c.c.s.C.SalesProcessingController        : INSIDE showSaveQuotePage method of SalesProcessingController
-2021-03-02 13:07:45.439  INFO 660 --- [http-nio-8081-exec-4] c.c.s.C.SalesProcessingController        : ENDING showSaveQuotePage method of SalesProcessingController
-2021-03-02 13:07:48.739  INFO 660 --- [http-nio-8081-exec-1] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage2 method of SalesProcessingController
-2021-03-02 13:07:48.740  INFO 660 --- [http-nio-8081-exec-1] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage2 method of SalesProcessingController
-2021-03-02 13:07:50.844  INFO 660 --- [http-nio-8081-exec-5] c.c.s.C.SalesProcessingController        : INSIDE showGetQuotesPage method of SalesProcessingController
-2021-03-02 13:07:50.845  INFO 660 --- [http-nio-8081-exec-5] c.c.s.C.SalesProcessingController        : ENDING showGetQuotesPage method of SalesProcessingController
-2021-03-02 13:07:52.106  INFO 660 --- [http-nio-8081-exec-6] c.c.s.C.SalesProcessingRestController    : Inside getAllQuotation method of SalesProcessingRestController
-2021-03-02 13:07:52.106  INFO 660 --- [http-nio-8081-exec-6] c.c.s.S.SalesProcessingServiceImpl       : Inside getAllQuotation method of SalesProcessingServiceImpl
-2021-03-02 13:07:56.178  INFO 660 --- [http-nio-8081-exec-8] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage2 method of SalesProcessingController
-2021-03-02 13:07:56.179  INFO 660 --- [http-nio-8081-exec-8] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage2 method of SalesProcessingController
-2021-03-02 13:07:57.425  INFO 660 --- [http-nio-8081-exec-10] c.c.s.C.SalesProcessingController        : INSIDE showGetQuoteByIdPage method of SalesProcessingController
-2021-03-02 13:07:57.426  INFO 660 --- [http-nio-8081-exec-10] c.c.s.C.SalesProcessingController        : ENDING showGetQuoteByIdPage method of SalesProcessingController
-2021-03-02 13:08:00.313  INFO 660 --- [http-nio-8081-exec-9] c.c.s.C.SalesProcessingRestController    : Inside getQuotation method of SalesProcessingRestController
-2021-03-02 13:08:00.314  INFO 660 --- [http-nio-8081-exec-9] c.c.s.S.SalesProcessingServiceImpl       : Inside getQuotation method of SalesProcessingServiceImpl
-2021-03-02 13:08:04.543  INFO 660 --- [http-nio-8081-exec-7] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage2 method of SalesProcessingController
-2021-03-02 13:08:04.543  INFO 660 --- [http-nio-8081-exec-7] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage2 method of SalesProcessingController
-2021-03-02 13:08:27.550  INFO 660 --- [http-nio-8081-exec-2] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
-2021-03-02 13:08:27.551  INFO 660 --- [http-nio-8081-exec-2] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
-2021-03-02 13:08:29.213  INFO 660 --- [http-nio-8081-exec-3] c.c.s.C.SalesProcessingController        : INSIDE showGetQuoteByIdPage method of SalesProcessingController
-2021-03-02 13:08:29.213  INFO 660 --- [http-nio-8081-exec-3] c.c.s.C.SalesProcessingController        : ENDING showGetQuoteByIdPage method of SalesProcessingController
-2021-03-02 13:08:31.734  INFO 660 --- [http-nio-8081-exec-4] c.c.s.C.SalesProcessingRestController    : Inside getQuotation method of SalesProcessingRestController
-2021-03-02 13:08:31.735  INFO 660 --- [http-nio-8081-exec-4] c.c.s.S.SalesProcessingServiceImpl       : Inside getQuotation method of SalesProcessingServiceImpl
-2021-03-02 13:08:34.813  INFO 660 --- [http-nio-8081-exec-1] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
-2021-03-02 13:08:34.813  INFO 660 --- [http-nio-8081-exec-1] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
-2021-03-02 13:09:07.347  INFO 660 --- [Thread-9] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-03-02 13:09:07.350  INFO 660 --- [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 13:09:07.351  INFO 660 --- [Thread-9] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2021-03-02 13:09:07.553  WARN 660 --- [Thread-9] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
-2021-03-02 13:09:07.553  INFO 660 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
-2021-03-02 13:09:07.555  INFO 660 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
-2021-03-02 13:09:07.697  INFO 660 --- [restartedMain] c.c.s.SalesProcessingServiceApplication  : Starting SalesProcessingServiceApplication using Java 15.0.1 on Dell with PID 660 (C:\Users\Harsha\Documents\caseStudy\salesProcessing-service\target\classes started by Harsha in C:\Users\Harsha\Documents\caseStudy\salesProcessing-service)
-2021-03-02 13:09:07.697  INFO 660 --- [restartedMain] c.c.s.SalesProcessingServiceApplication  : No active profile set, falling back to default profiles: default
-2021-03-02 13:09:08.099  INFO 660 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-03-02 13:09:08.113  INFO 660 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 1 JPA repository interfaces.
-2021-03-02 13:09:08.220  INFO 660 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
-2021-03-02 13:09:08.221  INFO 660 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-03-02 13:09:08.221  INFO 660 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
-2021-03-02 13:09:08.294  INFO 660 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2021-03-02 13:09:08.295  INFO 660 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-03-02 13:09:08.295  INFO 660 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 595 ms
-2021-03-02 13:09:08.322  INFO 660 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
-2021-03-02 13:09:08.326  INFO 660 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
-2021-03-02 13:09:08.326  INFO 660 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2021-03-02 13:09:08.369  INFO 660 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-03-02 13:09:08.379  INFO 660 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2021-03-02 13:09:08.435  INFO 660 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-03-02 13:09:08.436  INFO 660 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 13:09:08.449  INFO 660 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-03-02 13:09:08.581  WARN 660 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-03-02 13:09:08.629  INFO 660 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-03-02 13:09:08.683  INFO 660 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-03-02 13:09:08.779  INFO 660 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
-2021-03-02 13:09:08.780  INFO 660 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-03-02 13:09:08.782  INFO 660 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-03-02 13:09:08.788  INFO 660 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-03-02 13:09:08.856  WARN 660 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 13:09:08.863  WARN 660 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 13:09:08.867  WARN 660 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 13:09:08.873  WARN 660 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 13:09:08.915  INFO 660 --- [restartedMain] c.c.s.SalesProcessingServiceApplication  : Started SalesProcessingServiceApplication in 1.266 seconds (JVM running for 1608.899)
-2021-03-02 13:09:08.917  INFO 660 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2021-03-02 13:09:13.351  INFO 660 --- [http-nio-8081-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-03-02 13:09:13.352  INFO 660 --- [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-03-02 13:09:13.354  INFO 660 --- [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2021-03-02 13:09:13.356  INFO 660 --- [http-nio-8081-exec-3] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
-2021-03-02 13:09:13.357  INFO 660 --- [http-nio-8081-exec-3] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
-2021-03-02 13:09:15.196  INFO 660 --- [http-nio-8081-exec-1] c.c.s.C.SalesProcessingController        : INSIDE showSaveQuotePage method of SalesProcessingController
-2021-03-02 13:09:15.197  INFO 660 --- [http-nio-8081-exec-1] c.c.s.C.SalesProcessingController        : ENDING showSaveQuotePage method of SalesProcessingController
-2021-03-02 13:09:31.674  INFO 660 --- [http-nio-8081-exec-2] c.c.s.C.SalesProcessingRestController    : Inside saveQuotation method of SalesProcessingRestController
-2021-03-02 13:09:31.681  INFO 660 --- [http-nio-8081-exec-2] c.c.s.S.SalesProcessingServiceImpl       : Inside saveQuotation method of SalesProcessingServiceImpl
-2021-03-02 13:09:31.686  INFO 660 --- [http-nio-8081-exec-5] c.c.s.C.SalesProcessingController        : INSIDE showSaveQuotePage method of SalesProcessingController
-2021-03-02 13:09:31.686  INFO 660 --- [http-nio-8081-exec-5] c.c.s.C.SalesProcessingController        : ENDING showSaveQuotePage method of SalesProcessingController
-2021-03-02 13:09:53.017  INFO 660 --- [http-nio-8081-exec-4] c.c.s.C.SalesProcessingRestController    : Inside saveQuotation method of SalesProcessingRestController
-2021-03-02 13:09:53.018  INFO 660 --- [http-nio-8081-exec-4] c.c.s.S.SalesProcessingServiceImpl       : Inside saveQuotation method of SalesProcessingServiceImpl
-2021-03-02 13:09:53.033  INFO 660 --- [http-nio-8081-exec-6] c.c.s.C.SalesProcessingController        : INSIDE showSaveQuotePage method of SalesProcessingController
-2021-03-02 13:09:53.033  INFO 660 --- [http-nio-8081-exec-6] c.c.s.C.SalesProcessingController        : ENDING showSaveQuotePage method of SalesProcessingController
-2021-03-02 13:09:56.158  INFO 660 --- [http-nio-8081-exec-7] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
-2021-03-02 13:09:56.158  INFO 660 --- [http-nio-8081-exec-7] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
-2021-03-02 13:09:59.385  INFO 660 --- [http-nio-8081-exec-8] c.c.s.C.SalesProcessingController        : INSIDE showGetQuotesPage method of SalesProcessingController
-2021-03-02 13:09:59.386  INFO 660 --- [http-nio-8081-exec-8] c.c.s.C.SalesProcessingController        : ENDING showGetQuotesPage method of SalesProcessingController
-2021-03-02 13:10:00.615  INFO 660 --- [http-nio-8081-exec-9] c.c.s.C.SalesProcessingRestController    : Inside getAllQuotation method of SalesProcessingRestController
-2021-03-02 13:10:00.615  INFO 660 --- [http-nio-8081-exec-9] c.c.s.S.SalesProcessingServiceImpl       : Inside getAllQuotation method of SalesProcessingServiceImpl
-2021-03-02 13:10:00.647  INFO 660 --- [http-nio-8081-exec-10] c.c.s.C.SalesProcessingRestController    : Inside getAllQuotation method of SalesProcessingRestController
-2021-03-02 13:10:00.647  INFO 660 --- [http-nio-8081-exec-10] c.c.s.S.SalesProcessingServiceImpl       : Inside getAllQuotation method of SalesProcessingServiceImpl
-2021-03-02 13:10:04.126  INFO 660 --- [http-nio-8081-exec-3] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
-2021-03-02 13:10:04.126  INFO 660 --- [http-nio-8081-exec-3] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
-2021-03-02 13:10:05.556  INFO 660 --- [http-nio-8081-exec-1] c.c.s.C.SalesProcessingController        : INSIDE showGetQuoteByIdPage method of SalesProcessingController
-2021-03-02 13:10:05.557  INFO 660 --- [http-nio-8081-exec-1] c.c.s.C.SalesProcessingController        : ENDING showGetQuoteByIdPage method of SalesProcessingController
-2021-03-02 13:10:09.340  INFO 660 --- [http-nio-8081-exec-5] c.c.s.C.SalesProcessingRestController    : Inside getQuotation method of SalesProcessingRestController
-2021-03-02 13:10:09.341  INFO 660 --- [http-nio-8081-exec-5] c.c.s.S.SalesProcessingServiceImpl       : Inside getQuotation method of SalesProcessingServiceImpl
-2021-03-02 13:10:09.347  WARN 660 --- [http-nio-8081-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.caseStudy.salesProcessingservice.ExceptionHandling.QuotationRetrieveFailException: quote id not present]
-2021-03-02 13:10:13.278  INFO 660 --- [http-nio-8081-exec-2] c.c.s.C.SalesProcessingRestController    : Inside getQuotation method of SalesProcessingRestController
-2021-03-02 13:10:13.279  INFO 660 --- [http-nio-8081-exec-2] c.c.s.S.SalesProcessingServiceImpl       : Inside getQuotation method of SalesProcessingServiceImpl
-2021-03-02 13:10:14.988  INFO 660 --- [http-nio-8081-exec-4] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
-2021-03-02 13:10:14.988  INFO 660 --- [http-nio-8081-exec-4] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
-2021-03-02 13:10:19.439  INFO 660 --- [RMI TCP Connection(44)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2021-03-02 13:10:19.466  INFO 660 --- [RMI TCP Connection(44)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-03-02 13:10:19.468  INFO 660 --- [RMI TCP Connection(44)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 13:10:19.469  INFO 660 --- [RMI TCP Connection(44)-127.0.0.1] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2021-03-02 13:10:19.675  WARN 660 --- [RMI TCP Connection(44)-127.0.0.1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
-2021-03-02 13:10:19.676  INFO 660 --- [RMI TCP Connection(44)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
-2021-03-02 13:10:19.728  INFO 660 --- [RMI TCP Connection(44)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
-2021-03-02 14:48:21.977  INFO 12696 --- [main] s.SalesProcessingServiceApplicationTests : Starting SalesProcessingServiceApplicationTests using Java 15.0.1 on Dell with PID 12696 (started by Harsha in C:\Users\Harsha\Documents\caseStudy\salesProcessing-service)
-2021-03-02 14:48:21.986  INFO 12696 --- [main] s.SalesProcessingServiceApplicationTests : No active profile set, falling back to default profiles: default
-2021-03-02 14:48:26.463  INFO 12696 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-03-02 14:48:26.684  INFO 12696 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 189 ms. Found 1 JPA repository interfaces.
-2021-03-02 14:48:29.134  INFO 12696 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-03-02 14:48:30.385  INFO 12696 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-03-02 14:48:30.798  INFO 12696 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-03-02 14:48:31.212  INFO 12696 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
-2021-03-02 14:48:31.942  INFO 12696 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-03-02 14:48:32.799  INFO 12696 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2021-03-02 14:48:35.574  INFO 12696 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-03-02 14:48:35.601  INFO 12696 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 14:48:37.626  WARN 12696 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-03-02 14:48:38.013  INFO 12696 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2021-03-02 14:48:38.784  INFO 12696 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-03-02 14:48:39.890  INFO 12696 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-03-02 14:48:40.976  INFO 12696 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-03-02 14:48:41.069  INFO 12696 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-03-02 14:48:41.177  INFO 12696 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-03-02 14:48:41.475  WARN 12696 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 14:48:41.550  WARN 12696 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 14:48:41.565  WARN 12696 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 14:48:41.585  WARN 12696 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 14:48:41.815  INFO 12696 --- [main] s.SalesProcessingServiceApplicationTests : Started SalesProcessingServiceApplicationTests in 21.28 seconds (JVM running for 30.444)
-2021-03-02 14:48:42.942  INFO 12696 --- [main] c.c.s.S.SalesProcessingServiceImpl       : Inside saveQuotation method of SalesProcessingServiceImpl
-2021-03-02 14:48:43.331  INFO 12696 --- [main] c.c.s.S.SalesProcessingServiceImpl       : Inside getQuotation method of SalesProcessingServiceImpl
-2021-03-02 14:48:43.374  INFO 12696 --- [main] c.c.s.S.SalesProcessingServiceImpl       : Inside getQuotation method of SalesProcessingServiceImpl
-2021-03-02 14:48:43.412  INFO 12696 --- [main] c.c.s.S.SalesProcessingServiceImpl       : Inside saveQuotation method of SalesProcessingServiceImpl
-2021-03-02 14:48:43.450  INFO 12696 --- [main] c.c.s.S.SalesProcessingServiceImpl       : Inside getAllQuotation method of SalesProcessingServiceImpl
-2021-03-02 14:48:47.070  INFO 12696 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-03-02 14:48:47.190  INFO 12696 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 14:48:47.196  INFO 12696 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2021-03-02 14:48:47.271  INFO 12696 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-03-02 14:48:47.280  INFO 12696 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-03-02 14:56:36.237  INFO 1516 --- [main] s.SalesProcessingServiceApplicationTests : Starting SalesProcessingServiceApplicationTests using Java 15.0.1 on Dell with PID 1516 (started by Harsha in C:\Users\Harsha\Documents\caseStudy\salesProcessing-service)
-2021-03-02 14:56:36.250  INFO 1516 --- [main] s.SalesProcessingServiceApplicationTests : No active profile set, falling back to default profiles: default
-2021-03-02 14:56:39.175  INFO 1516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-03-02 14:56:39.348  INFO 1516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 150 ms. Found 1 JPA repository interfaces.
-2021-03-02 14:56:40.825  INFO 1516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-03-02 14:56:41.339  INFO 1516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-03-02 14:56:41.552  INFO 1516 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-03-02 14:56:41.724  INFO 1516 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
-2021-03-02 14:56:42.099  INFO 1516 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-03-02 14:56:42.713  INFO 1516 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2021-03-02 14:56:44.288  INFO 1516 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-03-02 14:56:44.315  INFO 1516 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 14:56:46.301  WARN 1516 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-03-02 14:56:46.549  INFO 1516 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2021-03-02 14:56:47.147  INFO 1516 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-03-02 14:56:47.980  INFO 1516 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-03-02 14:56:48.774  INFO 1516 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-03-02 14:56:48.814  INFO 1516 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-03-02 14:56:48.869  INFO 1516 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-03-02 14:56:49.089  WARN 1516 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 14:56:49.150  WARN 1516 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 14:56:49.197  WARN 1516 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 14:56:49.230  WARN 1516 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 14:56:49.464  INFO 1516 --- [main] s.SalesProcessingServiceApplicationTests : Started SalesProcessingServiceApplicationTests in 14.119 seconds (JVM running for 17.141)
-2021-03-02 14:56:50.470  INFO 1516 --- [main] c.c.s.S.SalesProcessingServiceImpl       : Inside saveQuotation method of SalesProcessingServiceImpl
-2021-03-02 14:56:51.119  INFO 1516 --- [main] c.c.s.S.SalesProcessingServiceImpl       : Inside getQuotation method of SalesProcessingServiceImpl
-2021-03-02 14:56:51.407  INFO 1516 --- [main] c.c.s.S.SalesProcessingServiceImpl       : Inside getAllQuotation method of SalesProcessingServiceImpl
-2021-03-02 14:56:51.536  INFO 1516 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-03-02 14:56:51.696  INFO 1516 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 14:56:51.698  INFO 1516 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2021-03-02 14:56:51.715  INFO 1516 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-03-02 14:56:51.726  INFO 1516 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-03-02 14:57:33.196  INFO 9516 --- [main] s.SalesProcessingServiceApplicationTests : Starting SalesProcessingServiceApplicationTests using Java 15.0.1 on Dell with PID 9516 (started by Harsha in C:\Users\Harsha\Documents\caseStudy\salesProcessing-service)
-2021-03-02 14:57:33.206  INFO 9516 --- [main] s.SalesProcessingServiceApplicationTests : No active profile set, falling back to default profiles: default
-2021-03-02 14:57:36.040  INFO 9516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-03-02 14:57:36.197  INFO 9516 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 140 ms. Found 1 JPA repository interfaces.
-2021-03-02 14:57:37.622  INFO 9516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-03-02 14:57:38.126  INFO 9516 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-03-02 14:57:38.504  INFO 9516 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-03-02 14:57:38.686  INFO 9516 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
-2021-03-02 14:57:39.060  INFO 9516 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-03-02 14:57:39.472  INFO 9516 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2021-03-02 14:57:41.007  INFO 9516 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-03-02 14:57:41.025  INFO 9516 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 14:57:42.734  WARN 9516 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-03-02 14:57:43.025  INFO 9516 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2021-03-02 14:57:43.611  INFO 9516 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-03-02 14:57:44.512  INFO 9516 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-03-02 14:57:45.347  INFO 9516 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-03-02 14:57:45.397  INFO 9516 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-03-02 14:57:45.461  INFO 9516 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-03-02 14:57:45.648  WARN 9516 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 14:57:45.701  WARN 9516 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 14:57:45.715  WARN 9516 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 14:57:45.727  WARN 9516 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 14:57:45.884  INFO 9516 --- [main] s.SalesProcessingServiceApplicationTests : Started SalesProcessingServiceApplicationTests in 13.979 seconds (JVM running for 16.95)
-2021-03-02 14:57:46.571  INFO 9516 --- [main] c.c.s.S.SalesProcessingServiceImpl       : Inside saveQuotation method of SalesProcessingServiceImpl
-2021-03-02 14:57:46.816  INFO 9516 --- [main] c.c.s.S.SalesProcessingServiceImpl       : Inside getQuotation method of SalesProcessingServiceImpl
-2021-03-02 14:57:46.836  INFO 9516 --- [main] c.c.s.S.SalesProcessingServiceImpl       : Inside getQuotation method of SalesProcessingServiceImpl
-2021-03-02 14:57:46.851  INFO 9516 --- [main] c.c.s.S.SalesProcessingServiceImpl       : Inside saveQuotation method of SalesProcessingServiceImpl
-2021-03-02 14:57:46.864  INFO 9516 --- [main] c.c.s.S.SalesProcessingServiceImpl       : Inside getAllQuotation method of SalesProcessingServiceImpl
-2021-03-02 14:57:46.915  INFO 9516 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-03-02 14:57:46.931  INFO 9516 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 14:57:46.932  INFO 9516 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2021-03-02 14:57:46.958  INFO 9516 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-03-02 14:57:46.971  INFO 9516 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-03-02 16:00:02.799  INFO 7712 --- [main] s.SalesProcessingServiceApplicationTests : Starting SalesProcessingServiceApplicationTests using Java 15.0.1 on Dell with PID 7712 (started by Harsha in C:\Users\Harsha\Documents\caseStudy\salesProcessing-service)
-2021-03-02 16:00:02.809  INFO 7712 --- [main] s.SalesProcessingServiceApplicationTests : No active profile set, falling back to default profiles: default
-2021-03-02 16:00:05.007  INFO 7712 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-03-02 16:00:05.127  INFO 7712 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102 ms. Found 1 JPA repository interfaces.
-2021-03-02 16:00:06.235  INFO 7712 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-03-02 16:00:06.663  INFO 7712 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-03-02 16:00:06.826  INFO 7712 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-03-02 16:00:06.950  INFO 7712 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
-2021-03-02 16:00:07.258  INFO 7712 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-03-02 16:00:07.598  INFO 7712 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2021-03-02 16:00:08.922  INFO 7712 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-03-02 16:00:08.944  INFO 7712 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 16:00:10.271  WARN 7712 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-03-02 16:00:10.470  INFO 7712 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2021-03-02 16:00:10.898  INFO 7712 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-03-02 16:00:11.558  INFO 7712 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-03-02 16:00:12.307  INFO 7712 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-03-02 16:00:12.361  INFO 7712 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-03-02 16:00:12.423  INFO 7712 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-03-02 16:00:12.596  WARN 7712 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:00:12.638  WARN 7712 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:00:12.646  WARN 7712 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:00:12.655  WARN 7712 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:00:12.779  INFO 7712 --- [main] s.SalesProcessingServiceApplicationTests : Started SalesProcessingServiceApplicationTests in 10.727 seconds (JVM running for 12.945)
-2021-03-02 16:00:13.335  INFO 7712 --- [main] c.c.s.S.SalesProcessingServiceImpl       : Inside saveQuotation method of SalesProcessingServiceImpl
-2021-03-02 16:00:13.530  INFO 7712 --- [main] c.c.s.S.SalesProcessingServiceImpl       : Inside getQuotation method of SalesProcessingServiceImpl
-2021-03-02 16:00:13.544  INFO 7712 --- [main] c.c.s.S.SalesProcessingServiceImpl       : Inside getQuotation method of SalesProcessingServiceImpl
-2021-03-02 16:00:13.559  INFO 7712 --- [main] c.c.s.S.SalesProcessingServiceImpl       : Inside saveQuotation method of SalesProcessingServiceImpl
-2021-03-02 16:00:13.573  INFO 7712 --- [main] c.c.s.S.SalesProcessingServiceImpl       : Inside getAllQuotation method of SalesProcessingServiceImpl
-2021-03-02 16:00:13.623  INFO 7712 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-03-02 16:00:13.636  INFO 7712 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 16:00:13.637  INFO 7712 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2021-03-02 16:00:13.663  INFO 7712 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-03-02 16:00:13.671  INFO 7712 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-03-02 16:06:43.980  INFO 8768 --- [main] .c.s.C.SalesProcessingRestControllerTest : Starting SalesProcessingRestControllerTest using Java 15.0.1 on Dell with PID 8768 (started by Harsha in C:\Users\Harsha\Documents\caseStudy\salesProcessing-service)
-2021-03-02 16:06:43.995  INFO 8768 --- [main] .c.s.C.SalesProcessingRestControllerTest : No active profile set, falling back to default profiles: default
-2021-03-02 16:06:46.298  INFO 8768 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-03-02 16:06:46.424  INFO 8768 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 107 ms. Found 1 JPA repository interfaces.
-2021-03-02 16:06:47.584  INFO 8768 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-03-02 16:06:47.974  INFO 8768 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-03-02 16:06:48.124  INFO 8768 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-03-02 16:06:48.221  INFO 8768 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
-2021-03-02 16:06:48.507  INFO 8768 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-03-02 16:06:48.787  INFO 8768 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2021-03-02 16:06:49.956  INFO 8768 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-03-02 16:06:49.978  INFO 8768 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 16:06:51.145  WARN 8768 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-03-02 16:06:51.382  INFO 8768 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2021-03-02 16:06:51.836  INFO 8768 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-03-02 16:06:52.539  INFO 8768 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-03-02 16:06:53.160  INFO 8768 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-03-02 16:06:53.190  INFO 8768 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-03-02 16:06:53.235  INFO 8768 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-03-02 16:06:53.403  WARN 8768 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:06:53.440  WARN 8768 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:06:53.449  WARN 8768 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:06:53.459  WARN 8768 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:06:53.580  INFO 8768 --- [main] .c.s.C.SalesProcessingRestControllerTest : Started SalesProcessingRestControllerTest in 10.27 seconds (JVM running for 12.645)
-2021-03-02 16:06:54.366  INFO 8768 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-03-02 16:06:54.384  INFO 8768 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 16:06:54.385  INFO 8768 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2021-03-02 16:06:54.410  INFO 8768 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-03-02 16:06:54.416  INFO 8768 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-03-02 16:07:41.281  INFO 3124 --- [main] .c.s.C.SalesProcessingRestControllerTest : Starting SalesProcessingRestControllerTest using Java 15.0.1 on Dell with PID 3124 (started by Harsha in C:\Users\Harsha\Documents\caseStudy\salesProcessing-service)
-2021-03-02 16:07:41.299  INFO 3124 --- [main] .c.s.C.SalesProcessingRestControllerTest : No active profile set, falling back to default profiles: default
-2021-03-02 16:07:43.633  INFO 3124 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-03-02 16:07:43.776  INFO 3124 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 124 ms. Found 1 JPA repository interfaces.
-2021-03-02 16:07:44.975  INFO 3124 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-03-02 16:07:45.405  INFO 3124 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-03-02 16:07:45.559  INFO 3124 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-03-02 16:07:45.666  INFO 3124 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
-2021-03-02 16:07:45.934  INFO 3124 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-03-02 16:07:46.205  INFO 3124 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2021-03-02 16:07:47.650  INFO 3124 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-03-02 16:07:47.670  INFO 3124 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 16:07:48.841  WARN 3124 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-03-02 16:07:49.039  INFO 3124 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2021-03-02 16:07:49.507  INFO 3124 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-03-02 16:07:50.141  INFO 3124 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-03-02 16:07:50.823  INFO 3124 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-03-02 16:07:50.867  INFO 3124 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-03-02 16:07:50.921  INFO 3124 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-03-02 16:07:51.068  WARN 3124 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:07:51.106  WARN 3124 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:07:51.114  WARN 3124 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:07:51.123  WARN 3124 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:07:51.242  INFO 3124 --- [main] .c.s.C.SalesProcessingRestControllerTest : Started SalesProcessingRestControllerTest in 10.632 seconds (JVM running for 12.821)
-2021-03-02 16:07:51.775 ERROR 3124 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@c35172e] to prepare test instance [com.caseStudy.salesProcessingservice.Controller.SalesProcessingRestControllerTest@fcae085]
-
-org.mockito.exceptions.base.MockitoException: 
-Cannot instantiate @InjectMocks field named 'quotationInfoRepository'! Cause: the type 'QuotationInfoRepository' is an interface.
-You haven't provided the instance at field declaration so I tried to construct the instance.
-Examples of correct usage of @InjectMocks:
-   @InjectMocks Service service = new Service();
-   @InjectMocks Service service;
-   //and... don't forget about some @Mocks for injection :)
-
-	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.initMocks(MockitoTestExecutionListener.java:78) ~[spring-boot-test-2.4.3.jar:2.4.3]
-	at org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener.prepareTestInstance(MockitoTestExecutionListener.java:55) ~[spring-boot-test-2.4.3.jar:2.4.3]
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) ~[spring-test-5.3.4.jar:5.3.4]
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138) ~[spring-test-5.3.4.jar:5.3.4]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:350) ~[junit-jupiter-engine-5.7.1.jar:5.7.1]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:355) ~[junit-jupiter-engine-5.7.1.jar:5.7.1]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$7(ClassBasedTestDescriptor.java:350) ~[junit-jupiter-engine-5.7.1.jar:5.7.1]
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177) ~[na:na]
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474) ~[na:na]
-	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312) ~[na:na]
-	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
-	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658) ~[na:na]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:349) ~[junit-jupiter-engine-5.7.1.jar:5.7.1]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$4(ClassBasedTestDescriptor.java:270) ~[junit-jupiter-engine-5.7.1.jar:5.7.1]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.1.jar:1.7.1]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:269) ~[junit-jupiter-engine-5.7.1.jar:5.7.1]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:259) ~[junit-jupiter-engine-5.7.1.jar:5.7.1]
-	at java.base/java.util.Optional.orElseGet(Optional.java:362) ~[na:na]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:258) ~[junit-jupiter-engine-5.7.1.jar:5.7.1]
-	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.7.1.jar:5.7.1]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:101) ~[junit-jupiter-engine-5.7.1.jar:5.7.1]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.1.jar:1.7.1]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:100) ~[junit-jupiter-engine-5.7.1.jar:5.7.1]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:65) ~[junit-jupiter-engine-5.7.1.jar:5.7.1]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:111) ~[junit-platform-engine-1.7.1.jar:1.7.1]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.1.jar:1.7.1]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:111) ~[junit-platform-engine-1.7.1.jar:1.7.1]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:79) ~[junit-platform-engine-1.7.1.jar:1.7.1]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.7.1.jar:1.7.1]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143) ~[junit-platform-engine-1.7.1.jar:1.7.1]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.1.jar:1.7.1]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.1.jar:1.7.1]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.1.jar:1.7.1]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.1.jar:1.7.1]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.1.jar:1.7.1]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.1.jar:1.7.1]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.1.jar:1.7.1]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.7.1.jar:1.7.1]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143) ~[junit-platform-engine-1.7.1.jar:1.7.1]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.1.jar:1.7.1]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.1.jar:1.7.1]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.1.jar:1.7.1]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.1.jar:1.7.1]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.1.jar:1.7.1]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.1.jar:1.7.1]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.1.jar:1.7.1]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.7.1.jar:1.7.1]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.7.1.jar:1.7.1]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.7.1.jar:1.7.1]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108) ~[junit-platform-launcher-1.7.1.jar:1.7.1]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88) ~[junit-platform-launcher-1.7.1.jar:1.7.1]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54) ~[junit-platform-launcher-1.7.1.jar:1.7.1]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67) ~[junit-platform-launcher-1.7.1.jar:1.7.1]
-	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52) ~[junit-platform-launcher-1.7.1.jar:1.7.1]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:96) ~[junit-platform-launcher-1.7.1.jar:1.7.1]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:84) ~[junit-platform-launcher-1.7.1.jar:1.7.1]
-	at org.eclipse.jdt.internal.junit5.runner.JUnit5TestReference.run(JUnit5TestReference.java:98) ~[.cp/:na]
-	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:41) ~[.cp/:na]
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:542) ~[.cp/:na]
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:770) ~[.cp/:na]
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:464) ~[.cp/:na]
-	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:210) ~[.cp/:na]
-
-2021-03-02 16:07:51.830  INFO 3124 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-03-02 16:07:51.842  INFO 3124 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 16:07:51.843  INFO 3124 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2021-03-02 16:07:51.863  INFO 3124 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-03-02 16:07:51.871  INFO 3124 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-03-02 16:08:46.911  INFO 8844 --- [main] .c.s.C.SalesProcessingRestControllerTest : Starting SalesProcessingRestControllerTest using Java 15.0.1 on Dell with PID 8844 (started by Harsha in C:\Users\Harsha\Documents\caseStudy\salesProcessing-service)
-2021-03-02 16:08:46.917  INFO 8844 --- [main] .c.s.C.SalesProcessingRestControllerTest : No active profile set, falling back to default profiles: default
-2021-03-02 16:08:49.016  INFO 8844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-03-02 16:08:49.147  INFO 8844 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 113 ms. Found 1 JPA repository interfaces.
-2021-03-02 16:08:50.424  INFO 8844 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-03-02 16:08:50.759  INFO 8844 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-03-02 16:08:50.902  INFO 8844 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-03-02 16:08:51.031  INFO 8844 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
-2021-03-02 16:08:51.316  INFO 8844 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-03-02 16:08:51.642  INFO 8844 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2021-03-02 16:08:52.994  INFO 8844 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-03-02 16:08:53.008  INFO 8844 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 16:08:54.210  WARN 8844 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-03-02 16:08:54.456  INFO 8844 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2021-03-02 16:08:54.868  INFO 8844 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-03-02 16:08:55.494  INFO 8844 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-03-02 16:08:56.261  INFO 8844 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-03-02 16:08:56.290  INFO 8844 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-03-02 16:08:56.343  INFO 8844 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-03-02 16:08:56.488  WARN 8844 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:08:56.529  WARN 8844 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:08:56.538  WARN 8844 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:08:56.547  WARN 8844 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:08:56.660  INFO 8844 --- [main] .c.s.C.SalesProcessingRestControllerTest : Started SalesProcessingRestControllerTest in 10.452 seconds (JVM running for 12.686)
-2021-03-02 16:08:57.184  INFO 8844 --- [main] c.c.s.S.SalesProcessingServiceImpl       : Inside saveQuotation method of SalesProcessingServiceImpl
-2021-03-02 16:08:57.307  INFO 8844 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-03-02 16:08:57.320  INFO 8844 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 16:08:57.322  INFO 8844 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2021-03-02 16:08:57.348  INFO 8844 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-03-02 16:08:57.352  INFO 8844 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-03-02 16:10:17.347  INFO 9136 --- [main] .c.s.C.SalesProcessingRestControllerTest : Starting SalesProcessingRestControllerTest using Java 15.0.1 on Dell with PID 9136 (started by Harsha in C:\Users\Harsha\Documents\caseStudy\salesProcessing-service)
-2021-03-02 16:10:17.351  INFO 9136 --- [main] .c.s.C.SalesProcessingRestControllerTest : No active profile set, falling back to default profiles: default
-2021-03-02 16:10:19.493  INFO 9136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-03-02 16:10:19.611  INFO 9136 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 1 JPA repository interfaces.
-2021-03-02 16:10:20.737  INFO 9136 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-03-02 16:10:21.114  INFO 9136 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-03-02 16:10:21.259  INFO 9136 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-03-02 16:10:21.363  INFO 9136 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
-2021-03-02 16:10:21.636  INFO 9136 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-03-02 16:10:21.922  INFO 9136 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2021-03-02 16:10:23.176  INFO 9136 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-03-02 16:10:23.193  INFO 9136 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 16:10:24.381  WARN 9136 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-03-02 16:10:24.594  INFO 9136 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2021-03-02 16:10:25.036  INFO 9136 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-03-02 16:10:25.681  INFO 9136 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-03-02 16:10:26.281  INFO 9136 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-03-02 16:10:26.326  INFO 9136 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-03-02 16:10:26.377  INFO 9136 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-03-02 16:10:26.514  WARN 9136 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:10:26.569  WARN 9136 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:10:26.578  WARN 9136 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:10:26.588  WARN 9136 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:10:26.694  INFO 9136 --- [main] .c.s.C.SalesProcessingRestControllerTest : Started SalesProcessingRestControllerTest in 10.038 seconds (JVM running for 12.192)
-2021-03-02 16:10:27.197  INFO 9136 --- [main] c.c.s.C.SalesProcessingRestController    : Inside saveQuotation method of SalesProcessingRestController
-2021-03-02 16:10:27.248  INFO 9136 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-03-02 16:10:27.265  INFO 9136 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 16:10:27.266  INFO 9136 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2021-03-02 16:10:27.281  INFO 9136 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-03-02 16:10:27.288  INFO 9136 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-03-02 16:14:07.179  INFO 3300 --- [main] .c.s.C.SalesProcessingRestControllerTest : Starting SalesProcessingRestControllerTest using Java 15.0.1 on Dell with PID 3300 (started by Harsha in C:\Users\Harsha\Documents\caseStudy\salesProcessing-service)
-2021-03-02 16:14:07.183  INFO 3300 --- [main] .c.s.C.SalesProcessingRestControllerTest : No active profile set, falling back to default profiles: default
-2021-03-02 16:14:09.254  INFO 3300 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-03-02 16:14:09.377  INFO 3300 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 109 ms. Found 1 JPA repository interfaces.
-2021-03-02 16:14:10.512  INFO 3300 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-03-02 16:14:10.907  INFO 3300 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-03-02 16:14:11.073  INFO 3300 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-03-02 16:14:11.198  INFO 3300 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
-2021-03-02 16:14:11.488  INFO 3300 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-03-02 16:14:11.792  INFO 3300 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2021-03-02 16:14:13.092  INFO 3300 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-03-02 16:14:13.112  INFO 3300 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 16:14:14.387  WARN 3300 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-03-02 16:14:14.600  INFO 3300 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2021-03-02 16:14:15.027  INFO 3300 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-03-02 16:14:15.642  INFO 3300 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-03-02 16:14:16.247  INFO 3300 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-03-02 16:14:16.280  INFO 3300 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-03-02 16:14:16.337  INFO 3300 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-03-02 16:14:16.470  WARN 3300 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:14:16.505  WARN 3300 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:14:16.514  WARN 3300 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:14:16.521  WARN 3300 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:14:16.631  INFO 3300 --- [main] .c.s.C.SalesProcessingRestControllerTest : Started SalesProcessingRestControllerTest in 10.071 seconds (JVM running for 12.38)
-2021-03-02 16:14:17.190  INFO 3300 --- [main] c.c.s.C.SalesProcessingRestController    : Inside saveQuotation method of SalesProcessingRestController
-2021-03-02 16:14:17.354  INFO 3300 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-03-02 16:14:17.370  INFO 3300 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 16:14:17.371  INFO 3300 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2021-03-02 16:14:17.389  INFO 3300 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-03-02 16:14:17.394  INFO 3300 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-03-02 16:14:35.329  INFO 12080 --- [main] .c.s.C.SalesProcessingRestControllerTest : Starting SalesProcessingRestControllerTest using Java 15.0.1 on Dell with PID 12080 (started by Harsha in C:\Users\Harsha\Documents\caseStudy\salesProcessing-service)
-2021-03-02 16:14:35.345  INFO 12080 --- [main] .c.s.C.SalesProcessingRestControllerTest : No active profile set, falling back to default profiles: default
-2021-03-02 16:14:38.418  INFO 12080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-03-02 16:14:38.565  INFO 12080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 123 ms. Found 1 JPA repository interfaces.
-2021-03-02 16:14:40.034  INFO 12080 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-03-02 16:14:40.856  INFO 12080 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-03-02 16:14:41.067  INFO 12080 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-03-02 16:14:41.263  INFO 12080 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
-2021-03-02 16:14:41.682  INFO 12080 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-03-02 16:14:42.165  INFO 12080 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2021-03-02 16:14:44.157  INFO 12080 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-03-02 16:14:44.178  INFO 12080 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 16:14:45.607  WARN 12080 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-03-02 16:14:45.856  INFO 12080 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2021-03-02 16:14:46.395  INFO 12080 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-03-02 16:14:47.148  INFO 12080 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-03-02 16:14:47.922  INFO 12080 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-03-02 16:14:47.988  INFO 12080 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-03-02 16:14:48.065  INFO 12080 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-03-02 16:14:48.251  WARN 12080 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:14:48.302  WARN 12080 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:14:48.312  WARN 12080 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:14:48.321  WARN 12080 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:14:48.452  INFO 12080 --- [main] .c.s.C.SalesProcessingRestControllerTest : Started SalesProcessingRestControllerTest in 14.101 seconds (JVM running for 18.219)
-2021-03-02 16:14:49.188  INFO 12080 --- [main] c.c.s.C.SalesProcessingRestController    : Inside saveQuotation method of SalesProcessingRestController
-2021-03-02 16:14:51.785  INFO 12080 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-03-02 16:14:51.872  INFO 12080 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 16:14:51.874  INFO 12080 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2021-03-02 16:14:51.901  INFO 12080 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-03-02 16:14:51.905  INFO 12080 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-03-02 16:26:17.819  INFO 8028 --- [main] .c.s.C.SalesProcessingRestControllerTest : Starting SalesProcessingRestControllerTest using Java 15.0.1 on Dell with PID 8028 (started by Harsha in C:\Users\Harsha\Documents\caseStudy\salesProcessing-service)
-2021-03-02 16:26:17.825  INFO 8028 --- [main] .c.s.C.SalesProcessingRestControllerTest : No active profile set, falling back to default profiles: default
-2021-03-02 16:26:19.926  INFO 8028 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-03-02 16:26:20.050  INFO 8028 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 111 ms. Found 1 JPA repository interfaces.
-2021-03-02 16:26:21.188  INFO 8028 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-03-02 16:26:21.637  INFO 8028 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-03-02 16:26:21.792  INFO 8028 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-03-02 16:26:21.917  INFO 8028 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
-2021-03-02 16:26:22.242  INFO 8028 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-03-02 16:26:22.596  INFO 8028 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2021-03-02 16:26:23.886  INFO 8028 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-03-02 16:26:23.913  INFO 8028 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 16:26:25.112  WARN 8028 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-03-02 16:26:25.340  INFO 8028 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2021-03-02 16:26:25.789  INFO 8028 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-03-02 16:26:26.419  INFO 8028 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-03-02 16:26:27.054  INFO 8028 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-03-02 16:26:27.085  INFO 8028 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-03-02 16:26:27.136  INFO 8028 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-03-02 16:26:27.291  WARN 8028 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:26:27.334  WARN 8028 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:26:27.343  WARN 8028 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:26:27.352  WARN 8028 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:26:27.474  INFO 8028 --- [main] .c.s.C.SalesProcessingRestControllerTest : Started SalesProcessingRestControllerTest in 10.338 seconds (JVM running for 12.86)
-2021-03-02 16:26:28.056  INFO 8028 --- [main] c.c.s.C.SalesProcessingRestController    : Inside saveQuotation method of SalesProcessingRestController
-2021-03-02 16:26:28.191  INFO 8028 --- [main] c.c.s.C.SalesProcessingRestController    : Inside getAllQuotation method of SalesProcessingRestController
-2021-03-02 16:26:28.222  INFO 8028 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-03-02 16:26:28.245  INFO 8028 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 16:26:28.246  INFO 8028 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2021-03-02 16:26:28.260 ERROR 8028 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000478: Unsuccessful: drop table if exists quote CASCADE 
-2021-03-02 16:26:28.277  WARN 8028 --- [SpringContextShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
-2021-03-02 16:26:28.277 ERROR 8028 --- [SpringContextShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
-2021-03-02 16:26:28.279  WARN 8028 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
-2021-03-02 16:26:28.280  INFO 8028 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-03-02 16:26:28.283  INFO 8028 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-03-02 16:26:46.526  INFO 9024 --- [main] .c.s.C.SalesProcessingRestControllerTest : Starting SalesProcessingRestControllerTest using Java 15.0.1 on Dell with PID 9024 (started by Harsha in C:\Users\Harsha\Documents\caseStudy\salesProcessing-service)
-2021-03-02 16:26:46.535  INFO 9024 --- [main] .c.s.C.SalesProcessingRestControllerTest : No active profile set, falling back to default profiles: default
-2021-03-02 16:26:49.424  INFO 9024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-03-02 16:26:49.562  INFO 9024 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 119 ms. Found 1 JPA repository interfaces.
-2021-03-02 16:26:51.089  INFO 9024 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-03-02 16:26:51.984  INFO 9024 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-03-02 16:26:52.209  INFO 9024 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-03-02 16:26:52.489  INFO 9024 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
-2021-03-02 16:26:52.892  INFO 9024 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-03-02 16:26:53.338  INFO 9024 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2021-03-02 16:26:55.346  INFO 9024 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-03-02 16:26:55.377  INFO 9024 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 16:26:56.988  WARN 9024 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-03-02 16:26:57.214  INFO 9024 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2021-03-02 16:26:57.721  INFO 9024 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-03-02 16:26:58.507  INFO 9024 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-03-02 16:26:59.227  INFO 9024 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-03-02 16:26:59.276  INFO 9024 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-03-02 16:26:59.359  INFO 9024 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-03-02 16:26:59.568  WARN 9024 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:26:59.610  WARN 9024 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:26:59.620  WARN 9024 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:26:59.629  WARN 9024 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:26:59.777  INFO 9024 --- [main] .c.s.C.SalesProcessingRestControllerTest : Started SalesProcessingRestControllerTest in 14.301 seconds (JVM running for 18.678)
-2021-03-02 16:27:00.471  INFO 9024 --- [main] c.c.s.C.SalesProcessingRestController    : Inside saveQuotation method of SalesProcessingRestController
-2021-03-02 16:27:00.616  INFO 9024 --- [main] c.c.s.C.SalesProcessingRestController    : Inside getAllQuotation method of SalesProcessingRestController
-2021-03-02 16:27:00.637  INFO 9024 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-03-02 16:27:00.652  INFO 9024 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 16:27:00.653  INFO 9024 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2021-03-02 16:27:02.966  INFO 9024 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-03-02 16:27:02.972  INFO 9024 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-03-02 16:29:54.764  INFO 6860 --- [main] .c.s.C.SalesProcessingRestControllerTest : Starting SalesProcessingRestControllerTest using Java 15.0.1 on Dell with PID 6860 (started by Harsha in C:\Users\Harsha\Documents\caseStudy\salesProcessing-service)
-2021-03-02 16:29:54.770  INFO 6860 --- [main] .c.s.C.SalesProcessingRestControllerTest : No active profile set, falling back to default profiles: default
-2021-03-02 16:29:56.985  INFO 6860 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-03-02 16:29:57.122  INFO 6860 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 111 ms. Found 1 JPA repository interfaces.
-2021-03-02 16:29:58.272  INFO 6860 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-03-02 16:29:58.636  INFO 6860 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-03-02 16:29:58.808  INFO 6860 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-03-02 16:29:58.915  INFO 6860 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
-2021-03-02 16:29:59.178  INFO 6860 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-03-02 16:29:59.500  INFO 6860 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2021-03-02 16:30:00.831  INFO 6860 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-03-02 16:30:00.852  INFO 6860 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 16:30:02.093  WARN 6860 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-03-02 16:30:02.381  INFO 6860 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2021-03-02 16:30:02.844  INFO 6860 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-03-02 16:30:03.471  INFO 6860 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-03-02 16:30:04.137  INFO 6860 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-03-02 16:30:04.179  INFO 6860 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-03-02 16:30:04.225  INFO 6860 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-03-02 16:30:04.387  WARN 6860 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:30:04.423  WARN 6860 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:30:04.431  WARN 6860 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:30:04.440  WARN 6860 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:30:04.546  INFO 6860 --- [main] .c.s.C.SalesProcessingRestControllerTest : Started SalesProcessingRestControllerTest in 10.437 seconds (JVM running for 12.609)
-2021-03-02 16:30:05.094  INFO 6860 --- [main] c.c.s.C.SalesProcessingRestController    : Inside saveQuotation method of SalesProcessingRestController
-2021-03-02 16:30:05.235  INFO 6860 --- [main] c.c.s.C.SalesProcessingRestController    : Inside getAllQuotation method of SalesProcessingRestController
-2021-03-02 16:30:05.264  INFO 6860 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-03-02 16:30:05.278  INFO 6860 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 16:30:05.279  INFO 6860 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2021-03-02 16:30:05.292 ERROR 6860 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000478: Unsuccessful: drop table if exists quote CASCADE 
-2021-03-02 16:30:05.294  WARN 6860 --- [SpringContextShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 90121, SQLState: 90121
-2021-03-02 16:30:05.294 ERROR 6860 --- [SpringContextShutdownHook] o.h.engine.jdbc.spi.SqlExceptionHelper   : Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
-2021-03-02 16:30:05.295  WARN 6860 --- [SpringContextShutdownHook] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'entityManagerFactory': org.hibernate.exception.JDBCConnectionException: Unable to release JDBC Connection used for DDL execution
-2021-03-02 16:30:05.296  INFO 6860 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-03-02 16:30:05.319  INFO 6860 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-03-02 16:35:34.846  INFO 10944 --- [main] .c.s.C.SalesProcessingRestControllerTest : Starting SalesProcessingRestControllerTest using Java 15.0.1 on Dell with PID 10944 (started by Harsha in C:\Users\Harsha\Documents\caseStudy\salesProcessing-service)
-2021-03-02 16:35:34.859  INFO 10944 --- [main] .c.s.C.SalesProcessingRestControllerTest : No active profile set, falling back to default profiles: default
-2021-03-02 16:35:37.140  INFO 10944 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-03-02 16:35:37.255  INFO 10944 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98 ms. Found 1 JPA repository interfaces.
-2021-03-02 16:35:38.372  INFO 10944 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-03-02 16:35:38.748  INFO 10944 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-03-02 16:35:38.893  INFO 10944 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-03-02 16:35:39.018  INFO 10944 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
-2021-03-02 16:35:39.298  INFO 10944 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-03-02 16:35:39.606  INFO 10944 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2021-03-02 16:35:40.695  INFO 10944 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-03-02 16:35:40.711  INFO 10944 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 16:35:41.886  WARN 10944 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-03-02 16:35:42.084  INFO 10944 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2021-03-02 16:35:42.606  INFO 10944 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-03-02 16:35:43.184  INFO 10944 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-03-02 16:35:43.828  INFO 10944 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-03-02 16:35:43.864  INFO 10944 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-03-02 16:35:43.911  INFO 10944 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-03-02 16:35:44.049  WARN 10944 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:35:44.089  WARN 10944 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:35:44.097  WARN 10944 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:35:44.106  WARN 10944 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:35:44.220  INFO 10944 --- [main] .c.s.C.SalesProcessingRestControllerTest : Started SalesProcessingRestControllerTest in 10.079 seconds (JVM running for 12.471)
-2021-03-02 16:35:44.801  INFO 10944 --- [main] c.c.s.C.SalesProcessingRestController    : Inside saveQuotation method of SalesProcessingRestController
-2021-03-02 16:35:44.921  INFO 10944 --- [main] c.c.s.C.SalesProcessingRestController    : Inside getQuotation method of SalesProcessingRestController
-2021-03-02 16:35:44.932  INFO 10944 --- [main] c.c.s.C.SalesProcessingRestController    : Inside getAllQuotation method of SalesProcessingRestController
-2021-03-02 16:35:44.953  INFO 10944 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-03-02 16:35:44.973  INFO 10944 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 16:35:44.974  INFO 10944 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2021-03-02 16:35:44.997  INFO 10944 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-03-02 16:35:45.002  INFO 10944 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-03-02 16:36:16.171  INFO 9940 --- [main] .c.s.C.SalesProcessingRestControllerTest : Starting SalesProcessingRestControllerTest using Java 15.0.1 on Dell with PID 9940 (started by Harsha in C:\Users\Harsha\Documents\caseStudy\salesProcessing-service)
-2021-03-02 16:36:16.180  INFO 9940 --- [main] .c.s.C.SalesProcessingRestControllerTest : No active profile set, falling back to default profiles: default
-2021-03-02 16:36:19.065  INFO 9940 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-03-02 16:36:19.212  INFO 9940 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 129 ms. Found 1 JPA repository interfaces.
-2021-03-02 16:36:20.798  INFO 9940 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-03-02 16:36:21.577  INFO 9940 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-03-02 16:36:21.768  INFO 9940 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-03-02 16:36:21.956  INFO 9940 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
-2021-03-02 16:36:22.462  INFO 9940 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-03-02 16:36:22.906  INFO 9940 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2021-03-02 16:36:24.986  INFO 9940 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-03-02 16:36:25.010  INFO 9940 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 16:36:26.384  WARN 9940 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-03-02 16:36:26.673  INFO 9940 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2021-03-02 16:36:27.178  INFO 9940 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-03-02 16:36:28.007  INFO 9940 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-03-02 16:36:28.772  INFO 9940 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-03-02 16:36:28.840  INFO 9940 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-03-02 16:36:28.925  INFO 9940 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-03-02 16:36:29.159  WARN 9940 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:36:29.217  WARN 9940 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:36:29.229  WARN 9940 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:36:29.239  WARN 9940 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:36:29.413  INFO 9940 --- [main] .c.s.C.SalesProcessingRestControllerTest : Started SalesProcessingRestControllerTest in 14.15 seconds (JVM running for 18.007)
-2021-03-02 16:36:30.103  INFO 9940 --- [main] c.c.s.C.SalesProcessingRestController    : Inside saveQuotation method of SalesProcessingRestController
-2021-03-02 16:36:30.340  INFO 9940 --- [main] c.c.s.C.SalesProcessingRestController    : Inside getQuotation method of SalesProcessingRestController
-2021-03-02 16:36:30.356  INFO 9940 --- [main] c.c.s.C.SalesProcessingRestController    : Inside getAllQuotation method of SalesProcessingRestController
-2021-03-02 16:36:32.787  INFO 9940 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-03-02 16:36:32.894  INFO 9940 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 16:36:32.896  INFO 9940 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2021-03-02 16:36:32.936  INFO 9940 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-03-02 16:36:32.949  INFO 9940 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-03-02 16:49:20.735  INFO 13276 --- [main] .c.s.C.SalesProcessingRestControllerTest : Starting SalesProcessingRestControllerTest using Java 15.0.1 on Dell with PID 13276 (started by Harsha in C:\Users\Harsha\Documents\caseStudy\salesProcessing-service)
-2021-03-02 16:49:20.741  INFO 13276 --- [main] .c.s.C.SalesProcessingRestControllerTest : No active profile set, falling back to default profiles: default
-2021-03-02 16:49:23.956  INFO 13276 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-03-02 16:49:24.087  INFO 13276 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 110 ms. Found 1 JPA repository interfaces.
-2021-03-02 16:49:25.605  INFO 13276 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-03-02 16:49:26.451  INFO 13276 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-03-02 16:49:26.626  INFO 13276 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-03-02 16:49:26.783  INFO 13276 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
-2021-03-02 16:49:27.178  INFO 13276 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-03-02 16:49:27.591  INFO 13276 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2021-03-02 16:49:29.483  INFO 13276 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-03-02 16:49:29.514  INFO 13276 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 16:49:30.841  WARN 13276 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-03-02 16:49:31.092  INFO 13276 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2021-03-02 16:49:31.588  INFO 13276 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
-2021-03-02 16:49:32.454  INFO 13276 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-03-02 16:49:33.383  INFO 13276 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2021-03-02 16:49:33.496  INFO 13276 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2021-03-02 16:49:33.617  INFO 13276 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2021-03-02 16:49:33.933  WARN 13276 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:49:33.999  WARN 13276 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:49:34.016  WARN 13276 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:49:34.025  WARN 13276 --- [main] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
-2021-03-02 16:49:34.248  INFO 13276 --- [main] .c.s.C.SalesProcessingRestControllerTest : Started SalesProcessingRestControllerTest in 14.476 seconds (JVM running for 19.499)
-2021-03-02 16:49:35.048  INFO 13276 --- [main] c.c.s.C.SalesProcessingRestController    : Inside saveQuotation method of SalesProcessingRestController
-2021-03-02 16:49:35.191  INFO 13276 --- [main] c.c.s.C.SalesProcessingRestController    : Inside getQuotation method of SalesProcessingRestController
-2021-03-02 16:49:35.205  INFO 13276 --- [main] c.c.s.C.SalesProcessingRestController    : Inside getAllQuotation method of SalesProcessingRestController
-2021-03-02 16:49:35.218  INFO 13276 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.caseStudy.salesProcessingservice.SalesProcessingServiceApplicationTests], using SpringBootContextLoader
-2021-03-02 16:49:35.221  INFO 13276 --- [main] o.s.t.c.support.AbstractContextLoader    : Could not detect default resource locations for test class [com.caseStudy.salesProcessingservice.SalesProcessingServiceApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-2021-03-02 16:49:35.221  INFO 13276 --- [main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.caseStudy.salesProcessingservice.SalesProcessingServiceApplicationTests]: SalesProcessingServiceApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2021-03-02 16:49:35.231  INFO 13276 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.caseStudy.salesProcessingservice.SalesProcessingServiceApplication for test class com.caseStudy.salesProcessingservice.SalesProcessingServiceApplicationTests
-2021-03-02 16:49:35.235  INFO 13276 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-2021-03-02 16:49:35.236  INFO 13276 --- [main] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@23d06658, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4f571de3, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@254a0ce8, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@3d0bfe05, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1dc9ad5a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6a060305, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1f5e7fe1, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7d4741d9, org.springframework.test.context.event.EventPublishingTestExecutionListener@2d349056, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@77f0b0de, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@1b3d68b6, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5c33ab81, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@558c3671, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@27080a5e, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@5780bed1]
-2021-03-02 16:49:35.249  INFO 13276 --- [main] c.c.s.S.SalesProcessingServiceImpl       : Inside saveQuotation method of SalesProcessingServiceImpl
-2021-03-02 16:49:35.275  INFO 13276 --- [main] c.c.s.S.SalesProcessingServiceImpl       : Inside getQuotation method of SalesProcessingServiceImpl
-2021-03-02 16:49:35.292  INFO 13276 --- [main] c.c.s.S.SalesProcessingServiceImpl       : Inside getQuotation method of SalesProcessingServiceImpl
-2021-03-02 16:49:35.316  INFO 13276 --- [main] c.c.s.S.SalesProcessingServiceImpl       : Inside saveQuotation method of SalesProcessingServiceImpl
-2021-03-02 16:49:35.335  INFO 13276 --- [main] c.c.s.S.SalesProcessingServiceImpl       : Inside getAllQuotation method of SalesProcessingServiceImpl
-2021-03-02 16:49:37.642  INFO 13276 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-03-02 16:49:37.734  INFO 13276 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-03-02 16:49:37.736  INFO 13276 --- [SpringContextShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2021-03-02 16:49:37.755  INFO 13276 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-03-02 16:49:37.761  INFO 13276 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-03-13 11:41:18.651  INFO 5648 --- [restartedMain] c.c.s.SalesProcessingServiceApplication  : Starting SalesProcessingServiceApplication using Java 15.0.1 on Dell with PID 5648 (C:\Users\Harsha\Documents\caseStudy\salesProcessing-service\target\classes started by Harsha in C:\Users\Harsha\Documents\caseStudy\salesProcessing-service)
+2021-03-13 11:41:18.672  INFO 5648 --- [restartedMain] c.c.s.SalesProcessingServiceApplication  : No active profile set, falling back to default profiles: default
+2021-03-13 11:41:18.916  INFO 5648 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-13 11:41:18.918  INFO 5648 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-13 11:41:21.144  INFO 5648 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-13 11:41:21.236  INFO 5648 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 1 JPA repository interfaces.
+2021-03-13 11:41:21.959  INFO 5648 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-03-13 11:41:21.970  INFO 5648 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-03-13 11:41:21.971  INFO 5648 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-13 11:41:22.267  INFO 5648 --- [restartedMain] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2021-03-13 11:41:22.278  INFO 5648 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-03-13 11:41:22.278  INFO 5648 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3357 ms
+2021-03-13 11:41:22.330  INFO 5648 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-13 11:41:22.585  INFO 5648 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-13 11:41:22.600  INFO 5648 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-03-13 11:41:22.776  INFO 5648 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-13 11:41:22.840  INFO 5648 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-13 11:41:23.044  INFO 5648 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-13 11:41:23.246  INFO 5648 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-03-13 11:41:24.167  INFO 5648 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-13 11:41:24.178  INFO 5648 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-13 11:41:24.221  INFO 5648 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-03-13 11:41:24.906  WARN 5648 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-13 11:41:25.101  INFO 5648 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-03-13 11:41:25.237  INFO 5648 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-13 11:41:25.518  INFO 5648 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2021-03-13 11:41:25.519  INFO 5648 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-03-13 11:41:25.555  INFO 5648 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-03-13 11:41:25.591  INFO 5648 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-03-13 11:41:25.704  WARN 5648 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
+2021-03-13 11:41:25.737  WARN 5648 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
+2021-03-13 11:41:25.743  WARN 5648 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
+2021-03-13 11:41:25.748  WARN 5648 --- [restartedMain] s.d.s.w.r.p.ParameterDataTypeReader      : Trying to infer dataType org.springframework.ui.ModelMap
+2021-03-13 11:41:25.866  INFO 5648 --- [restartedMain] c.c.s.SalesProcessingServiceApplication  : Started SalesProcessingServiceApplication in 7.851 seconds (JVM running for 9.131)
+2021-03-13 11:41:49.362  INFO 5648 --- [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-13 11:41:49.363  INFO 5648 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-03-13 11:41:49.366  INFO 5648 --- [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-03-13 11:41:49.401  INFO 5648 --- [http-nio-8081-exec-2] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
+2021-03-13 11:41:49.402  INFO 5648 --- [http-nio-8081-exec-2] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
+2021-03-13 11:41:53.483  INFO 5648 --- [http-nio-8081-exec-3] c.c.s.C.SalesProcessingController        : INSIDE showSaveQuotePage method of SalesProcessingController
+2021-03-13 11:41:53.484  INFO 5648 --- [http-nio-8081-exec-3] c.c.s.C.SalesProcessingController        : ENDING showSaveQuotePage method of SalesProcessingController
+2021-03-13 11:41:56.229  INFO 5648 --- [http-nio-8081-exec-1] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
+2021-03-13 11:41:56.230  INFO 5648 --- [http-nio-8081-exec-1] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
+2021-03-13 11:41:57.601  INFO 5648 --- [http-nio-8081-exec-4] c.c.s.C.SalesProcessingController        : INSIDE showGetQuotesPage method of SalesProcessingController
+2021-03-13 11:41:57.602  INFO 5648 --- [http-nio-8081-exec-4] c.c.s.C.SalesProcessingController        : ENDING showGetQuotesPage method of SalesProcessingController
+2021-03-13 11:41:59.752  INFO 5648 --- [http-nio-8081-exec-5] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
+2021-03-13 11:41:59.753  INFO 5648 --- [http-nio-8081-exec-5] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
+2021-03-13 11:42:00.771  INFO 5648 --- [http-nio-8081-exec-6] c.c.s.C.SalesProcessingController        : INSIDE showGetQuoteByIdPage method of SalesProcessingController
+2021-03-13 11:42:00.771  INFO 5648 --- [http-nio-8081-exec-6] c.c.s.C.SalesProcessingController        : ENDING showGetQuoteByIdPage method of SalesProcessingController
+2021-03-13 11:42:02.211  INFO 5648 --- [http-nio-8081-exec-7] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
+2021-03-13 11:42:02.212  INFO 5648 --- [http-nio-8081-exec-7] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
+2021-03-13 11:46:52.894  INFO 5648 --- [http-nio-8081-exec-10] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
+2021-03-13 11:46:52.894  INFO 5648 --- [http-nio-8081-exec-10] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
+2021-03-13 11:47:00.636  INFO 5648 --- [http-nio-8081-exec-2] c.c.s.C.SalesProcessingController        : INSIDE showSaveQuotePage method of SalesProcessingController
+2021-03-13 11:47:00.636  INFO 5648 --- [http-nio-8081-exec-2] c.c.s.C.SalesProcessingController        : ENDING showSaveQuotePage method of SalesProcessingController
+2021-03-13 11:47:55.959  INFO 5648 --- [http-nio-8081-exec-4] c.c.s.C.SalesProcessingController        : INSIDE showSaveQuotePage method of SalesProcessingController
+2021-03-13 11:47:55.960  INFO 5648 --- [http-nio-8081-exec-4] c.c.s.C.SalesProcessingController        : ENDING showSaveQuotePage method of SalesProcessingController
+2021-03-13 11:47:56.049  INFO 5648 --- [http-nio-8081-exec-1] c.c.s.C.SalesProcessingRestController    : Inside saveQuotation method of SalesProcessingRestController
+2021-03-13 11:47:56.050  INFO 5648 --- [http-nio-8081-exec-1] c.c.s.S.SalesProcessingServiceImpl       : Inside saveQuotation method of SalesProcessingServiceImpl
+2021-03-13 11:48:05.419  INFO 5648 --- [http-nio-8081-exec-5] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
+2021-03-13 11:48:05.420  INFO 5648 --- [http-nio-8081-exec-5] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
+2021-03-13 11:48:09.180  INFO 5648 --- [http-nio-8081-exec-6] c.c.s.C.SalesProcessingController        : INSIDE showGetQuotesPage method of SalesProcessingController
+2021-03-13 11:48:09.182  INFO 5648 --- [http-nio-8081-exec-6] c.c.s.C.SalesProcessingController        : ENDING showGetQuotesPage method of SalesProcessingController
+2021-03-13 11:48:10.919  INFO 5648 --- [http-nio-8081-exec-7] c.c.s.C.SalesProcessingRestController    : Inside getAllQuotation method of SalesProcessingRestController
+2021-03-13 11:48:10.919  INFO 5648 --- [http-nio-8081-exec-7] c.c.s.S.SalesProcessingServiceImpl       : Inside getAllQuotation method of SalesProcessingServiceImpl
+2021-03-13 11:48:13.634  INFO 5648 --- [http-nio-8081-exec-9] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
+2021-03-13 11:48:13.635  INFO 5648 --- [http-nio-8081-exec-9] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
+2021-03-13 11:49:26.819  INFO 5648 --- [http-nio-8081-exec-2] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
+2021-03-13 11:49:26.820  INFO 5648 --- [http-nio-8081-exec-2] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
+2021-03-13 11:49:28.674  INFO 5648 --- [http-nio-8081-exec-3] c.c.s.C.SalesProcessingController        : INSIDE showSaveQuotePage method of SalesProcessingController
+2021-03-13 11:49:28.675  INFO 5648 --- [http-nio-8081-exec-3] c.c.s.C.SalesProcessingController        : ENDING showSaveQuotePage method of SalesProcessingController
+2021-03-13 11:50:06.202  INFO 5648 --- [http-nio-8081-exec-4] c.c.s.C.SalesProcessingController        : INSIDE showSaveQuotePage method of SalesProcessingController
+2021-03-13 11:50:06.202  INFO 5648 --- [http-nio-8081-exec-4] c.c.s.C.SalesProcessingController        : ENDING showSaveQuotePage method of SalesProcessingController
+2021-03-13 11:50:22.573  INFO 5648 --- [http-nio-8081-exec-1] c.c.s.C.SalesProcessingController        : INSIDE showSaveQuotePage method of SalesProcessingController
+2021-03-13 11:50:22.574  INFO 5648 --- [http-nio-8081-exec-1] c.c.s.C.SalesProcessingController        : ENDING showSaveQuotePage method of SalesProcessingController
+2021-03-13 11:51:30.270  INFO 5648 --- [http-nio-8081-exec-7] c.c.s.C.SalesProcessingController        : INSIDE showSaveQuotePage method of SalesProcessingController
+2021-03-13 11:51:30.271  INFO 5648 --- [http-nio-8081-exec-7] c.c.s.C.SalesProcessingController        : ENDING showSaveQuotePage method of SalesProcessingController
+2021-03-13 11:51:35.808  INFO 5648 --- [http-nio-8081-exec-9] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
+2021-03-13 11:51:35.808  INFO 5648 --- [http-nio-8081-exec-9] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
+2021-03-13 11:51:37.970  INFO 5648 --- [http-nio-8081-exec-8] c.c.s.C.SalesProcessingController        : INSIDE showSaveQuotePage method of SalesProcessingController
+2021-03-13 11:51:37.971  INFO 5648 --- [http-nio-8081-exec-8] c.c.s.C.SalesProcessingController        : ENDING showSaveQuotePage method of SalesProcessingController
+2021-03-13 11:52:21.475  INFO 5648 --- [http-nio-8081-exec-10] c.c.s.C.SalesProcessingController        : INSIDE showSaveQuotePage method of SalesProcessingController
+2021-03-13 11:52:21.476  INFO 5648 --- [http-nio-8081-exec-10] c.c.s.C.SalesProcessingController        : ENDING showSaveQuotePage method of SalesProcessingController
+2021-03-13 11:52:26.191  INFO 5648 --- [http-nio-8081-exec-2] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
+2021-03-13 11:52:26.192  INFO 5648 --- [http-nio-8081-exec-2] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
+2021-03-13 11:52:27.862  INFO 5648 --- [http-nio-8081-exec-3] c.c.s.C.SalesProcessingController        : INSIDE showSaveQuotePage method of SalesProcessingController
+2021-03-13 11:52:27.862  INFO 5648 --- [http-nio-8081-exec-3] c.c.s.C.SalesProcessingController        : ENDING showSaveQuotePage method of SalesProcessingController
+2021-03-13 11:52:30.188  INFO 5648 --- [http-nio-8081-exec-4] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
+2021-03-13 11:52:30.189  INFO 5648 --- [http-nio-8081-exec-4] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
+2021-03-13 11:52:31.408  INFO 5648 --- [http-nio-8081-exec-5] c.c.s.C.SalesProcessingController        : INSIDE showGetQuotesPage method of SalesProcessingController
+2021-03-13 11:52:31.409  INFO 5648 --- [http-nio-8081-exec-5] c.c.s.C.SalesProcessingController        : ENDING showGetQuotesPage method of SalesProcessingController
+2021-03-13 11:52:32.877  INFO 5648 --- [http-nio-8081-exec-6] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
+2021-03-13 11:52:32.878  INFO 5648 --- [http-nio-8081-exec-6] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
+2021-03-13 11:56:39.386  INFO 5648 --- [http-nio-8081-exec-8] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
+2021-03-13 11:56:39.387  INFO 5648 --- [http-nio-8081-exec-8] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
+2021-03-13 11:56:41.065  INFO 5648 --- [http-nio-8081-exec-10] c.c.s.C.SalesProcessingController        : INSIDE showGetQuotesPage method of SalesProcessingController
+2021-03-13 11:56:41.066  INFO 5648 --- [http-nio-8081-exec-10] c.c.s.C.SalesProcessingController        : ENDING showGetQuotesPage method of SalesProcessingController
+2021-03-13 11:56:44.574  INFO 5648 --- [http-nio-8081-exec-2] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
+2021-03-13 11:56:44.575  INFO 5648 --- [http-nio-8081-exec-2] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
+2021-03-13 11:56:46.940  INFO 5648 --- [http-nio-8081-exec-3] c.c.s.C.SalesProcessingController        : INSIDE showGetQuotesPage method of SalesProcessingController
+2021-03-13 11:56:46.940  INFO 5648 --- [http-nio-8081-exec-3] c.c.s.C.SalesProcessingController        : ENDING showGetQuotesPage method of SalesProcessingController
+2021-03-13 11:56:48.910  INFO 5648 --- [http-nio-8081-exec-4] c.c.s.C.SalesProcessingRestController    : Inside getAllQuotation method of SalesProcessingRestController
+2021-03-13 11:56:48.911  INFO 5648 --- [http-nio-8081-exec-4] c.c.s.S.SalesProcessingServiceImpl       : Inside getAllQuotation method of SalesProcessingServiceImpl
+2021-03-13 11:56:57.275  INFO 5648 --- [http-nio-8081-exec-1] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
+2021-03-13 11:56:57.278  INFO 5648 --- [http-nio-8081-exec-1] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
+2021-03-13 11:57:42.148  INFO 5648 --- [http-nio-8081-exec-6] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
+2021-03-13 11:57:42.149  INFO 5648 --- [http-nio-8081-exec-6] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
+2021-03-13 11:57:43.118  INFO 5648 --- [http-nio-8081-exec-7] c.c.s.C.SalesProcessingController        : INSIDE showGetQuotesPage method of SalesProcessingController
+2021-03-13 11:57:43.118  INFO 5648 --- [http-nio-8081-exec-7] c.c.s.C.SalesProcessingController        : ENDING showGetQuotesPage method of SalesProcessingController
+2021-03-13 11:57:49.278  INFO 5648 --- [http-nio-8081-exec-9] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
+2021-03-13 11:57:49.280  INFO 5648 --- [http-nio-8081-exec-9] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
+2021-03-13 11:57:51.375  INFO 5648 --- [http-nio-8081-exec-8] c.c.s.C.SalesProcessingController        : INSIDE showGetQuotesPage method of SalesProcessingController
+2021-03-13 11:57:51.375  INFO 5648 --- [http-nio-8081-exec-8] c.c.s.C.SalesProcessingController        : ENDING showGetQuotesPage method of SalesProcessingController
+2021-03-13 11:57:52.233  INFO 5648 --- [http-nio-8081-exec-10] c.c.s.C.SalesProcessingRestController    : Inside getAllQuotation method of SalesProcessingRestController
+2021-03-13 11:57:52.234  INFO 5648 --- [http-nio-8081-exec-10] c.c.s.S.SalesProcessingServiceImpl       : Inside getAllQuotation method of SalesProcessingServiceImpl
+2021-03-13 11:57:57.922  INFO 5648 --- [http-nio-8081-exec-2] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
+2021-03-13 11:57:57.923  INFO 5648 --- [http-nio-8081-exec-2] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
+2021-03-13 11:58:01.597  INFO 5648 --- [http-nio-8081-exec-3] c.c.s.C.SalesProcessingController        : INSIDE showGetQuoteByIdPage method of SalesProcessingController
+2021-03-13 11:58:01.598  INFO 5648 --- [http-nio-8081-exec-3] c.c.s.C.SalesProcessingController        : ENDING showGetQuoteByIdPage method of SalesProcessingController
+2021-03-13 12:02:17.509  INFO 5648 --- [http-nio-8081-exec-5] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
+2021-03-13 12:02:17.510  INFO 5648 --- [http-nio-8081-exec-5] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
+2021-03-13 12:02:18.331  INFO 5648 --- [http-nio-8081-exec-6] c.c.s.C.SalesProcessingController        : INSIDE showGetQuotesPage method of SalesProcessingController
+2021-03-13 12:02:18.331  INFO 5648 --- [http-nio-8081-exec-6] c.c.s.C.SalesProcessingController        : ENDING showGetQuotesPage method of SalesProcessingController
+2021-03-13 12:02:20.382  INFO 5648 --- [http-nio-8081-exec-7] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
+2021-03-13 12:02:20.383  INFO 5648 --- [http-nio-8081-exec-7] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
+2021-03-13 12:02:22.138  INFO 5648 --- [http-nio-8081-exec-9] c.c.s.C.SalesProcessingController        : INSIDE showGetQuoteByIdPage method of SalesProcessingController
+2021-03-13 12:02:22.139  INFO 5648 --- [http-nio-8081-exec-9] c.c.s.C.SalesProcessingController        : ENDING showGetQuoteByIdPage method of SalesProcessingController
+2021-03-13 12:02:26.311  INFO 5648 --- [http-nio-8081-exec-8] c.c.s.C.SalesProcessingRestController    : Inside getQuotation method of SalesProcessingRestController
+2021-03-13 12:02:26.311  INFO 5648 --- [http-nio-8081-exec-8] c.c.s.S.SalesProcessingServiceImpl       : Inside getQuotation method of SalesProcessingServiceImpl
+2021-03-13 12:02:30.003  INFO 5648 --- [http-nio-8081-exec-10] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
+2021-03-13 12:02:30.003  INFO 5648 --- [http-nio-8081-exec-10] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
+2021-03-13 12:02:31.435  INFO 5648 --- [http-nio-8081-exec-2] c.c.s.C.SalesProcessingController        : INSIDE showGetQuotesPage method of SalesProcessingController
+2021-03-13 12:02:31.436  INFO 5648 --- [http-nio-8081-exec-2] c.c.s.C.SalesProcessingController        : ENDING showGetQuotesPage method of SalesProcessingController
+2021-03-13 12:02:33.243  INFO 5648 --- [http-nio-8081-exec-3] c.c.s.C.SalesProcessingRestController    : Inside getAllQuotation method of SalesProcessingRestController
+2021-03-13 12:02:33.243  INFO 5648 --- [http-nio-8081-exec-3] c.c.s.S.SalesProcessingServiceImpl       : Inside getAllQuotation method of SalesProcessingServiceImpl
+2021-03-13 12:02:35.550  INFO 5648 --- [http-nio-8081-exec-4] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
+2021-03-13 12:02:35.552  INFO 5648 --- [http-nio-8081-exec-4] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
+2021-03-13 12:03:39.181  INFO 5648 --- [http-nio-8081-exec-6] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
+2021-03-13 12:03:39.182  INFO 5648 --- [http-nio-8081-exec-6] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
+2021-03-13 12:03:39.738  INFO 5648 --- [http-nio-8081-exec-7] c.c.s.C.SalesProcessingController        : INSIDE showGetQuotesPage method of SalesProcessingController
+2021-03-13 12:03:39.738  INFO 5648 --- [http-nio-8081-exec-7] c.c.s.C.SalesProcessingController        : ENDING showGetQuotesPage method of SalesProcessingController
+2021-03-13 12:03:41.157  INFO 5648 --- [http-nio-8081-exec-9] c.c.s.C.SalesProcessingRestController    : Inside getAllQuotation method of SalesProcessingRestController
+2021-03-13 12:03:41.158  INFO 5648 --- [http-nio-8081-exec-9] c.c.s.S.SalesProcessingServiceImpl       : Inside getAllQuotation method of SalesProcessingServiceImpl
+2021-03-13 12:03:41.810  INFO 5648 --- [http-nio-8081-exec-8] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
+2021-03-13 12:03:41.811  INFO 5648 --- [http-nio-8081-exec-8] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
+2021-03-13 12:03:42.770  INFO 5648 --- [http-nio-8081-exec-10] c.c.s.C.SalesProcessingController        : INSIDE showGetQuoteByIdPage method of SalesProcessingController
+2021-03-13 12:03:42.770  INFO 5648 --- [http-nio-8081-exec-10] c.c.s.C.SalesProcessingController        : ENDING showGetQuoteByIdPage method of SalesProcessingController
+2021-03-13 12:03:46.643  INFO 5648 --- [http-nio-8081-exec-2] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
+2021-03-13 12:03:46.644  INFO 5648 --- [http-nio-8081-exec-2] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
+2021-03-13 12:03:48.410  INFO 5648 --- [http-nio-8081-exec-3] c.c.s.C.SalesProcessingController        : INSIDE showGetQuoteByIdPage method of SalesProcessingController
+2021-03-13 12:03:48.411  INFO 5648 --- [http-nio-8081-exec-3] c.c.s.C.SalesProcessingController        : ENDING showGetQuoteByIdPage method of SalesProcessingController
+2021-03-13 12:03:51.056  INFO 5648 --- [http-nio-8081-exec-4] c.c.s.C.SalesProcessingRestController    : Inside getQuotation method of SalesProcessingRestController
+2021-03-13 12:03:51.057  INFO 5648 --- [http-nio-8081-exec-4] c.c.s.S.SalesProcessingServiceImpl       : Inside getQuotation method of SalesProcessingServiceImpl
+2021-03-13 12:04:17.924  INFO 5648 --- [http-nio-8081-exec-1] c.c.s.C.SalesProcessingController        : INSIDE showGetQuoteByIdPage method of SalesProcessingController
+2021-03-13 12:04:17.925  INFO 5648 --- [http-nio-8081-exec-1] c.c.s.C.SalesProcessingController        : ENDING showGetQuoteByIdPage method of SalesProcessingController
+2021-03-13 12:04:22.109  INFO 5648 --- [http-nio-8081-exec-5] c.c.s.C.SalesProcessingRestController    : Inside getQuotation method of SalesProcessingRestController
+2021-03-13 12:04:22.110  INFO 5648 --- [http-nio-8081-exec-5] c.c.s.S.SalesProcessingServiceImpl       : Inside getQuotation method of SalesProcessingServiceImpl
+2021-03-13 12:04:37.232  INFO 5648 --- [http-nio-8081-exec-6] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
+2021-03-13 12:04:37.233  INFO 5648 --- [http-nio-8081-exec-6] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
+2021-03-13 12:04:38.492  INFO 5648 --- [http-nio-8081-exec-7] c.c.s.C.SalesProcessingController        : INSIDE showSaveQuotePage method of SalesProcessingController
+2021-03-13 12:04:38.493  INFO 5648 --- [http-nio-8081-exec-7] c.c.s.C.SalesProcessingController        : ENDING showSaveQuotePage method of SalesProcessingController
+2021-03-13 12:04:49.765  INFO 5648 --- [http-nio-8081-exec-8] c.c.s.C.SalesProcessingRestController    : Inside saveQuotation method of SalesProcessingRestController
+2021-03-13 12:04:49.766  INFO 5648 --- [http-nio-8081-exec-8] c.c.s.S.SalesProcessingServiceImpl       : Inside saveQuotation method of SalesProcessingServiceImpl
+2021-03-13 12:04:49.779  INFO 5648 --- [http-nio-8081-exec-10] c.c.s.C.SalesProcessingController        : INSIDE showSaveQuotePage method of SalesProcessingController
+2021-03-13 12:04:49.780  INFO 5648 --- [http-nio-8081-exec-10] c.c.s.C.SalesProcessingController        : ENDING showSaveQuotePage method of SalesProcessingController
+2021-03-13 12:04:53.605  INFO 5648 --- [http-nio-8081-exec-2] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
+2021-03-13 12:04:53.606  INFO 5648 --- [http-nio-8081-exec-2] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
+2021-03-13 12:04:56.218  INFO 5648 --- [http-nio-8081-exec-3] c.c.s.C.SalesProcessingController        : INSIDE showGetQuotesPage method of SalesProcessingController
+2021-03-13 12:04:56.219  INFO 5648 --- [http-nio-8081-exec-3] c.c.s.C.SalesProcessingController        : ENDING showGetQuotesPage method of SalesProcessingController
+2021-03-13 12:04:57.645  INFO 5648 --- [http-nio-8081-exec-4] c.c.s.C.SalesProcessingRestController    : Inside getAllQuotation method of SalesProcessingRestController
+2021-03-13 12:04:57.646  INFO 5648 --- [http-nio-8081-exec-4] c.c.s.S.SalesProcessingServiceImpl       : Inside getAllQuotation method of SalesProcessingServiceImpl
+2021-03-13 12:05:01.150  INFO 5648 --- [http-nio-8081-exec-1] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
+2021-03-13 12:05:01.151  INFO 5648 --- [http-nio-8081-exec-1] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
+2021-03-13 12:05:02.731  INFO 5648 --- [http-nio-8081-exec-5] c.c.s.C.SalesProcessingController        : INSIDE showGetQuoteByIdPage method of SalesProcessingController
+2021-03-13 12:05:02.732  INFO 5648 --- [http-nio-8081-exec-5] c.c.s.C.SalesProcessingController        : ENDING showGetQuoteByIdPage method of SalesProcessingController
+2021-03-13 12:05:06.205  INFO 5648 --- [http-nio-8081-exec-6] c.c.s.C.SalesProcessingRestController    : Inside getQuotation method of SalesProcessingRestController
+2021-03-13 12:05:06.206  INFO 5648 --- [http-nio-8081-exec-6] c.c.s.S.SalesProcessingServiceImpl       : Inside getQuotation method of SalesProcessingServiceImpl
+2021-03-13 12:05:33.615  INFO 5648 --- [http-nio-8081-exec-7] c.c.s.C.SalesProcessingController        : INSIDE showGetQuoteByIdPage method of SalesProcessingController
+2021-03-13 12:05:33.616  INFO 5648 --- [http-nio-8081-exec-7] c.c.s.C.SalesProcessingController        : ENDING showGetQuoteByIdPage method of SalesProcessingController
+2021-03-13 12:05:36.743  INFO 5648 --- [http-nio-8081-exec-9] c.c.s.C.SalesProcessingRestController    : Inside getQuotation method of SalesProcessingRestController
+2021-03-13 12:05:36.744  INFO 5648 --- [http-nio-8081-exec-9] c.c.s.S.SalesProcessingServiceImpl       : Inside getQuotation method of SalesProcessingServiceImpl
+2021-03-13 12:06:08.401  INFO 5648 --- [http-nio-8081-exec-2] c.c.s.C.SalesProcessingController        : INSIDE showGetQuoteByIdPage method of SalesProcessingController
+2021-03-13 12:06:08.402  INFO 5648 --- [http-nio-8081-exec-2] c.c.s.C.SalesProcessingController        : ENDING showGetQuoteByIdPage method of SalesProcessingController
+2021-03-13 12:06:10.964  INFO 5648 --- [http-nio-8081-exec-1] c.c.s.C.SalesProcessingRestController    : Inside getQuotation method of SalesProcessingRestController
+2021-03-13 12:06:10.964  INFO 5648 --- [http-nio-8081-exec-1] c.c.s.S.SalesProcessingServiceImpl       : Inside getQuotation method of SalesProcessingServiceImpl
+2021-03-13 12:06:37.243  INFO 5648 --- [http-nio-8081-exec-6] c.c.s.C.SalesProcessingController        : INSIDE showGetQuoteByIdPage method of SalesProcessingController
+2021-03-13 12:06:37.243  INFO 5648 --- [http-nio-8081-exec-6] c.c.s.C.SalesProcessingController        : ENDING showGetQuoteByIdPage method of SalesProcessingController
+2021-03-13 12:06:39.666  INFO 5648 --- [http-nio-8081-exec-7] c.c.s.C.SalesProcessingRestController    : Inside getQuotation method of SalesProcessingRestController
+2021-03-13 12:06:39.667  INFO 5648 --- [http-nio-8081-exec-7] c.c.s.S.SalesProcessingServiceImpl       : Inside getQuotation method of SalesProcessingServiceImpl
+2021-03-13 12:07:04.177  INFO 5648 --- [http-nio-8081-exec-10] c.c.s.C.SalesProcessingController        : INSIDE showGetQuoteByIdPage method of SalesProcessingController
+2021-03-13 12:07:04.177  INFO 5648 --- [http-nio-8081-exec-10] c.c.s.C.SalesProcessingController        : ENDING showGetQuoteByIdPage method of SalesProcessingController
+2021-03-13 12:07:06.963  INFO 5648 --- [http-nio-8081-exec-3] c.c.s.C.SalesProcessingRestController    : Inside getQuotation method of SalesProcessingRestController
+2021-03-13 12:07:06.964  INFO 5648 --- [http-nio-8081-exec-3] c.c.s.S.SalesProcessingServiceImpl       : Inside getQuotation method of SalesProcessingServiceImpl
+2021-03-13 12:07:18.283  INFO 5648 --- [http-nio-8081-exec-5] c.c.s.C.SalesProcessingController        : INSIDE showGetQuoteByIdPage method of SalesProcessingController
+2021-03-13 12:07:18.283  INFO 5648 --- [http-nio-8081-exec-5] c.c.s.C.SalesProcessingController        : ENDING showGetQuoteByIdPage method of SalesProcessingController
+2021-03-13 12:07:21.708  INFO 5648 --- [http-nio-8081-exec-6] c.c.s.C.SalesProcessingRestController    : Inside getQuotation method of SalesProcessingRestController
+2021-03-13 12:07:21.708  INFO 5648 --- [http-nio-8081-exec-6] c.c.s.S.SalesProcessingServiceImpl       : Inside getQuotation method of SalesProcessingServiceImpl
+2021-03-13 12:08:21.309  INFO 5648 --- [http-nio-8081-exec-8] c.c.s.C.SalesProcessingRestController    : Inside getQuotation method of SalesProcessingRestController
+2021-03-13 12:08:21.310  INFO 5648 --- [http-nio-8081-exec-8] c.c.s.S.SalesProcessingServiceImpl       : Inside getQuotation method of SalesProcessingServiceImpl
+2021-03-13 12:08:26.665  INFO 5648 --- [http-nio-8081-exec-10] c.c.s.C.SalesProcessingRestController    : Inside getQuotation method of SalesProcessingRestController
+2021-03-13 12:08:26.665  INFO 5648 --- [http-nio-8081-exec-10] c.c.s.S.SalesProcessingServiceImpl       : Inside getQuotation method of SalesProcessingServiceImpl
+2021-03-13 12:08:30.448  INFO 5648 --- [http-nio-8081-exec-4] c.c.s.C.SalesProcessingRestController    : Inside getQuotation method of SalesProcessingRestController
+2021-03-13 12:08:30.449  INFO 5648 --- [http-nio-8081-exec-4] c.c.s.S.SalesProcessingServiceImpl       : Inside getQuotation method of SalesProcessingServiceImpl
+2021-03-13 12:08:32.513  INFO 5648 --- [http-nio-8081-exec-2] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
+2021-03-13 12:08:32.513  INFO 5648 --- [http-nio-8081-exec-2] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
+2021-03-13 12:08:33.656  INFO 5648 --- [http-nio-8081-exec-3] c.c.s.C.SalesProcessingController        : INSIDE showGetQuotesPage method of SalesProcessingController
+2021-03-13 12:08:33.657  INFO 5648 --- [http-nio-8081-exec-3] c.c.s.C.SalesProcessingController        : ENDING showGetQuotesPage method of SalesProcessingController
+2021-03-13 12:08:35.079  INFO 5648 --- [http-nio-8081-exec-1] c.c.s.C.SalesProcessingRestController    : Inside getAllQuotation method of SalesProcessingRestController
+2021-03-13 12:08:35.079  INFO 5648 --- [http-nio-8081-exec-1] c.c.s.S.SalesProcessingServiceImpl       : Inside getAllQuotation method of SalesProcessingServiceImpl
+2021-03-13 12:08:39.157  INFO 5648 --- [http-nio-8081-exec-5] c.c.s.C.SalesProcessingController        : INSIDE showWelcomePage method of SalesProcessingController
+2021-03-13 12:08:39.157  INFO 5648 --- [http-nio-8081-exec-5] c.c.s.C.SalesProcessingController        : ENDING showWelcomePage method of SalesProcessingController
+2021-03-13 12:08:48.483  INFO 5648 --- [RMI TCP Connection(34)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2021-03-13 12:08:48.518  INFO 5648 --- [RMI TCP Connection(34)-127.0.0.1] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-13 12:08:48.524  INFO 5648 --- [RMI TCP Connection(34)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-03-13 12:08:48.525  INFO 5648 --- [RMI TCP Connection(34)-127.0.0.1] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-03-13 12:08:48.744  WARN 5648 --- [RMI TCP Connection(34)-127.0.0.1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2021-03-13 12:08:48.744  INFO 5648 --- [RMI TCP Connection(34)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-03-13 12:08:48.748  INFO 5648 --- [RMI TCP Connection(34)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
